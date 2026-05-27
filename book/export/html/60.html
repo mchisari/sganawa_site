@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it" xml:lang="it">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="/dosearch.js"></script>
+    <title>Del DSP e delle sue meraviglie (quarta parte)</title>
+    <base href="http://www.sganawa.org" />
+    <link type="text/css" rel="stylesheet" href="misc/print.css" />
+      </head>
+  <body>
+        
+    <div id="node-60" class="section-1">
+  <h1 class="book-heading">Del DSP e delle sue meraviglie (quarta parte)</h1>
+  <h5>Da &quot;Micro &amp; Personal Computer&quot; - Rubrica &quot;PC &amp; Radio&quot;- Febbraio 1995 </h5>
+<h3>Del DSP e delle sue meraviglie (quarta parte)</h3>
+<h5>[nota: le precedenti tre sono andate perdute]&nbsp;</h5>
+<p><em>Rassicuratevi: stavolta, come promesso, non parleremo di formule matematica, ma ci butteremo con soddisfazione nel lato pi&ugrave; squisitamente pratico della faccenda. Siete pronti? Avete &quot;affilato&quot; i ricevitori? Allora si parte!</em></p>
+<h5>di Mario Chisari IW0CDT</h5>
+<p> Ebbene si, anche se vi potr&agrave; sembrare strano, le formule viste la scorsa volta, che penso a molti saranno suonate astruse, hanno una loro applicazione estremamente pratica e reale, e vado subito a dimostrarvelo. </p>
+<p>Per prima cosa, per&ograve;, richiamo la vostra attenzione sullo schema generale di sistema DSP che presentai nella prima puntata. Gi&agrave; in quell'occasione vi feci notare che l'unica parte normalmente non presente in un PC, ovvero il convertitore analogico/digitale, &egrave; in realt&agrave; presente in tutte le schede audio. </p>
+<p>Ecco quindi che in questa puntata vi presenter&ograve; alcuni programmi che fanno uso di queste semplici interfacce per realizzare una qualche forma di filtraggio digitale. </p>
+<p>Quante volte avete sentito dire &quot;non &egrave; vero che le schede audio servono solo per i giochini, anzi i computer moderni non possono farne a meno, ecc.&quot;? Bene, questa &egrave; l'occasione per darne una prova irrefutabile, o quantomeno per crearsi un solido alibi mentale... </p>
+<p>Purtroppo, come potrete constatare, si tratta di programmi ancora molto elementari, che non raggiungono la raffinatezza di un Jvfax o Hamcomm; ma si tratta di peccati di giovent&ugrave;. E mai come questa volta vi invito a tenere presente il concetto di &quot;Shareware&quot;: se pensate che il programma vale la pena di essere migliorato, mandatene un riconoscimento tangibile allo sviluppatore. Vedrete pi&ugrave; facilmente nuovi sviluppi, e saprete di aver, nel vostro piccolo, contribuito allo sviluppo della Conoscenza! </p>
+<p>SBDSP </p>
+<p>Il primo programma che vi presento permette di ricevere immagini APT utilizzando una normale scheda Sound Blaster. Come ricorderete, l'APT &egrave; il modo di trasmissione utilizzato dai satelliti meteorologici, sia geostazionari che polari. I primi sono ricevibili sui 1.700 MHz, i secondi nella banda dei 136 MHz. </p>
+<p>SBDSP funziona sostanzialmente in modalit&agrave; &quot;batch&quot;; cio&egrave; la ricezione e la decodifica vengono effettuate in tempi differenti. </p>
+<p>Per prima cosa occorre digitalizzare il segnale in ricezione, generando un file in formato .VOC. &Egrave; possibile farlo usando l'apposita utilit&agrave; fornita in dotazione con la scheda Sound Blaster, o qualsiasi programma voi vogliate. </p>
+<p>Una volta effettuata la registrazione, si potr&agrave; decodificarla in santa pace usando per l'appunto il programma SBDSP. La procedura non fornisce certo il risultato immediato che tutti noi desidereremmo, ma bisogna considerare che porta una serie di vantaggi. Per prima cosa, non occorre un microprocessore particolarmente potente; se avete la pazienza di aspettare, potete decodificare il tutto anche con un 8088... </p>
+<p>Potete poi applicare dei trattamenti digitali al segnale registrato, usando qualche programma di manipolazione audio; se vi sono rumori o distrurbi, potete cercare il miglior modo di attenuarli, e quindi ricavare l'intera immagine nel modo migliore. Insomma, quello che appare come un difetto potrebbe per qualcuno rivelarsi un pregio. </p>
+<p>Se avete intenzione di scrivere un qualsiasi programma di DSP per la radio, o siete semplicemente curiosi di capire come funzionano &quot;in pratica&quot;, andatevi a leggere la documentazione di SBDSP: vi sono descritti una serie di problemini pratici, con relativo modo di aggirarli, che altrimenti vi farebbero perdere parecchio tempo... </p>
+<p>FFTMORSE </p>
+<p>Nonostante il nome, questo programma non utilizza la procedura di FFT (Fast Fourier Transform) &quot;classica&quot;, ma piuttosto una versione ottimizzata a mano; questo perch&eacute;, come racconta l'autore Fran&ccedil;ois Jalbert, con il numero di dati necessari il vantaggio ottenuto con quest'ultima rispetto all'algoritmo &quot;normale&quot; non era rilevante. Per ottenere un risultato migliore, Fran&ccedil;ois ha riscritto la &quot;sua&quot; routine di FFT utilizzando un notevole numero di variabili temporanee che sono comuni a vari termini della formula di Fourier. Ed il risultato finale &egrave; davvero ottimo: FFTMorse gira perfettamente anche su un 286 a 12 MHz, quello dell'autore. Di necessit&agrave; virt&ugrave;, diceva il saggio. </p>
+<p>La ricezione del codice Morse &egrave; un compito apparentemente facile, ma ottenere una decodifica particolarmente pulita in tutte le situazioni, soprattutto considerando che la sorgente &egrave; umana, non &egrave; poi cos&igrave; banale. </p>
+<p>FFTMorse fa il suo lavoro in modo davvero stupefacente, riuscendo ad estrarre il segnalino Morse anche in mezzo al caos. Grazie ad un comodo indicatore, &egrave; molto semplice sintonizzare il segnale voluto nello stretto filtro di FFTMorse. Facile da usare quanto Hamcomm, ma infinitamente pi&ugrave; resistente in presenza di rumore ed interferenze. Provare per credere... </p>
+<p>A voler essere precisi, la tecnica adoperata da Jalbert non &egrave; corretta fino in fondo. Un errore che commettono gli inesperti (quale non sembra essere Jalbert) &egrave;, per filtrare una sola singola frequenza, prendere in considerazione solo la componente dello spettro relativa. Ad esempio, per isolare la frequenza di 400 Hertz, si pu&ograve; pensare di prendere la sola &quot;tacca&quot; dello spettro marcata 400 Hertz. </p>
+<p>Si pu&ograve; dimostrare matematicamente che un filtro cos&igrave; realizzato in realt&agrave; lascia passare rumore un po' da tutte le bande; ma poi, insomma, queste sono sofisticherie per un programma che deve solo capire se il segnale c'&egrave; oppure no... </p>
+<p>FFTMorse &egrave; un programma completamente gratuito, di cui viene distribuito anche il sorgente in linguaggio C. </p>
+<p>SLOWSCAN </p>
+<p>Anche se non ho mai avuto il piacere di presentarvela (e porr&ograve; rimedio alla mancanza appena possibile), esiste tra i radioamatori anche un modo di trasmissione di tipo &quot;televisivo&quot;, denominato SSTV. </p>
+<p>La sigla vuol dire &quot;Slow Scan Television&quot;, ovvero televisione a scansione lenta; con questo sistema i radioamatori possono trasmettere immagini a colori a diverse risoluzioni, generalmente abbastanza basse per ridurre il tempo necessario. Senza entrare nei dettagli, la SSTV &egrave; una parente stretta del Fax meteo, tant'&egrave; che anche Jvfax permette sia di riceverla che di trasmetterla. </p>
+<p>SlowScan &egrave; un programma che permette di entrare dalla porta principale in questa &quot;disciplina&quot;, offrendo a costo ridottissimo una notevole qualit&agrave;, anche se solo in ricezione. </p>
+<p>La modalit&agrave; di funzionamento &egrave; un, diciamo cos&igrave;, &quot;batch interattivo&quot;: una volta avviato il programma, si preme un tasto per iniziare l'acquisizione, che viene salvata nel solito file .VOC. Appena terminata, inizia subito la decodifica, con la seguente visualizzazione. Il funzionamento in differita stavolta &egrave; un problema davvero relativo, visto che una trasmissione SSTV dura 8 secondi. </p>
+<p>Anche qui &egrave; possibile regolare le frequenze relative al &quot;bianco&quot; ed al &quot;nero&quot; (tra virgolette in quanto in realt&agrave; qui si parla di colore). </p>
+<p>Quando si opera in HF, il problema principale che si presenta &egrave; quello della sintonia; SSTV, infatti, non offre la possibilit&agrave; di regolarla con metodi strumentali. Il mio consiglio, a parte l'&quot;orecchiometro&quot; (cio&egrave; fare ad orecchio), &egrave; di applicare in parallelo un'interfaccia Hamcomm, utilizzando dapprima questo per le operazioni di regolazione; sintonizzata la stazione si lancia il programma per la Sound Blaster. </p>
+<p>Si spera, poi, che con le successive versioni dei programmi questa operazione possa essere evitata. </p>
+<p>WEATHERMAN </p>
+<p>A qualcuno potrebbe a questo punto venire il dubbio che fare una &quot;vera&quot; operazione di DSP sul PC sia in realt&agrave; impossibile: su tre programmi, appena uno offre questa possibilit&agrave;, e per l'applicazione meno pesante. </p>
+<p>Eccoci quindi puntualmente smentiti dall'ultimo della lista: un pacchetto uscito da pochi mesi, che offre la possibilit&agrave; di ricezione DSP in tempo reale. Provare per credere: lanciando il programma e sintonizzando una stazione MeteoFax in onde corte, si potranno ricevere immagini in toni di grigio di qualit&agrave; eccellente. </p>
+<p>Una vera &quot;dritta&quot; offerta dall'autore &egrave; il programma Wxdemo: pi&ugrave; che una demo, si tratta della controparte trasmittente di Wxman. Il suo scopo &egrave; duplice: oltre a permettere la trasmissione, se interessati, vi permette di ascoltare &quot;dal vivo&quot; un vero segnale Fax. Come dice l'autore, il WeFax ha un suono inconfondibile che per&ograve; &egrave; molto difficile da descrivere (io ci avevo provato dicendo &quot;come una carriola cigolante&quot;). </p>
+<p>Con Wxdemo potete avere finalmente un esempio dal vivo, e, con un minimo di orecchio, potete perfino provare a sintonizzare il segnale ricevuto &quot;a orecchio&quot;, confrontandolo col vostro. </p>
+<p>Wxman &egrave; purtroppo un programma ancora piuttosto &quot;ruspante&quot;, a parte il lato qualit&agrave; delle immagini; manca la possibilit&agrave; di ricezione automatica, manca il sincronismo orizzontale automatico, il che vuol dire che l'immagine ve la dovete ruotare al punto giusto da soli. Ma ne vale la pena... </p>
+  </div>
+    
+  </body>
+</html>

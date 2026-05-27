@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it" xml:lang="it">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="/dosearch.js"></script>
+    <title>GSM e conflitti generazionali (seconda parte)</title>
+    <base href="http://www.sganawa.org" />
+    <link type="text/css" rel="stylesheet" href="misc/print.css" />
+      </head>
+  <body>
+              <div class="section-1">
+          
+    <div id="node-66" class="section-2">
+  <h1 class="book-heading">GSM e conflitti generazionali (seconda parte)</h1>
+  <h5>Da &quot;Micro &amp; Personal Computer&quot; - Rubrica &quot;PC &amp; Radio&quot;- Dicembre 1995 </h5>
+<h3><strong><strong>GSM e conflitti generazionali (seconda parte)</strong></strong> </h3>
+<p><em>Dopo averle introdotte nel precedente appuntamento, vediamo in questa puntata di precisare ed esaminare vantaggi e caratteristiche dei vari metodi di multiplazione, (FDMA, TDMA, CDMA), e quali ruoli essi svolgono nelle telecomunicazioni, via radio ed in generale.</em></p>
+<h5>di Mario Chisari IW0CDT</h5>
+<p>Avevamo presentato la scorsa volta le tre &quot;generazioni&quot; della tecnica di multiplazione via radio, che si rendono necessarie per trasportare l'enorme traffico prodotto dalla telefonia mobile: FDMA, TDMA e CDMA, acronimi rispettivamente della multiplazione nel dominio della frequenza, del tempo e di codice. </p>
+<p>Le ultime due sono tecnologie nate per l'impiego digitale, e per questo &egrave; generalmente richiesto il passaggio dal segnale vocale ad un flusso di dati digitali, comprimibile con svariate tecniche (ecco perch&eacute; questa rubrica se ne pu&ograve; occupare...). </p>
+<p>Una volta passati al digitale, avevamo anche osservato che, paradossalmente, mentre il GSM appartiene alla seconda generazione, il Packet Radio appartiene gi&agrave; alla terza, dunque &egrave;, almeno apparentemente, pi&ugrave; evoluto. </p>
+<p>Queste &quot;generazioni&quot; non vanno confuse con gli &quot;standard&quot; che le realizzano, ossia E-TACS, o GSM, o Packet Radio; qualsiasi nuovo standard, creato ora o in futuro, appartiene necessariamente ad una di queste tre categorie, anche se, con il passare del tempo, sempre pi&ugrave; ricadranno nella terza. </p>
+<p>Nelle figure trovate la rappresentazione del tipo di uso fatto dei canali dalle varie tecniche. </p>
+<p>LA PRIMA GENERAZIONE: LA FDMA </p>
+<p>Nella FDMA (fig.1), tutto &egrave; molto semplice: ogni stazione trasmette sul suo canale, ed &egrave; tutto risolto. Questa apparente semplicit&agrave; &egrave; per&ograve; poco efficiente quando si hanno moltissime comunicazioni simultanee. La FDMA &egrave;, e rimarr&agrave;, principe nei sistemi di radiodiffusione (RAI, radio private, emittenti ad onde corte), per le stazioni utility (stazioni campione e meteo) e, per le trasmissioni in voce tra i radioamatori, che sono tutto sommato pochi. Vediamo quali sono le caratteristiche della FDMA. </p>
+<ul>
+<li>Capacit&agrave; di sintesi di frequenza: la stazione mobile deve essere in grado di sintonizzarsi una volta per tutte su una frequenza, e mantenerla finche non &egrave; necessaria cambiarla (per un passaggio di cella). </li>
+<li>Trasmissione continua: per impegnare il canale la trasmittente (che pu&ograve; essere portatile) deve trasmettere sempre, anche nei momenti di silenzio, con spreco di canale e di energia. </li>
+<li>Necessit&agrave; di trasmissione full duplex. Nelle telecomunicazioni si usa distinguere tra trasmissioni simplex e duplex (sono parole latine, non inglesi!); simplex indica che le due trasmittenti operano sulla stessa frequenza, trasmettendo alternativamente una alla volta (come tra CB, radioamatori, Packet Radio); duplex invece che ogni stazione trasmette sulla sua frequenza e riceve su quella dell'altra. Si ha <em>full duplex </em>quando ognuna &egrave; in grado di trasmettere mentre riceve l'altra (come nel caso del telefono), mentre se almeno una non &egrave; in grado di farlo, si parla di <em>half duplex.</em> Il full duplex richiede di trasmettere e ricevere contemporaneamente, senza auto-causarsi interferenze, e necessita quindi di filtri antidisturbo (<em>duplexer</em>) ingombranti e non semplici da tarare. </li>
+<li>Larghezza di banda ristretta: un canale deve essere pi&ugrave; stretto possibile, per ospitare pi&ugrave; utenti ; questo vuol dire filtri pi&ugrave; complessi, minor rapporto segnale/rumore, maggiore possibilit&agrave; di incappare in &quot;nulli&quot; di segnale dovuti ad evanescenza multipercorso. Quest'ultimo fenomeno &egrave; evidente a chi, con qualsiasi radio, ha notato che, anche in zone di segnale discreto, esistono punti in cui non si riesce a ricevere nulla; spostandosi di poco, il segnale ritorna normale. Si tratta di un effetto denominato &quot;evanescenza multipercorso&quot;, e si ha quando nello stesso punto arrivano due segnali, che hanno seguito percorsi e riflessioni diverse, ed arrivano esattamente in controfase, annullandosi. Questo fenomeno avviene solo ad una particolare frequenza, quindi cambiando canale (o semplicemente allargandolo) &egrave; possibile ridurre di molto il problema. </li>
+<li>Minore &quot;overhead&quot; intrinseco: non occorrono informazioni di sincronizzazione temporale, n&eacute; tenere conto dei ritardi di propagazione. Necessita per&ograve; un protocollo digitale, che occupa, disturbandolo, il canale audio. Su tutti i telefoni cellulari &egrave; necessario per, ad esempio, identificare il terminale o il numero chiamato, o inviare messaggi di cambio frequenza; sono quegli instanti in cui, in un telefono &quot;E-TACS&quot; sparisce l'audio, con effetto deleterio per chi impiega un modem di qualsiasi genere. </li>
+<li>Costi di infrastrutture elevati: se una stazione base deve servire 100 terminali mobili, deve disporre di 100 trasmittenti e 100 riceventi indipendenti. Con un sistema TDMA, ogni canale ospita 8 terminali, permettendo cos&igrave; di dividere per 8 il numero di coppie trasmittente/ricevente necessarie. Va per&ograve; detto che le apparecchiature mobili FDMA sono pi&ugrave; semplici delle corrispondenti TDMA, in quanto operano da sole su un canale. </li>
+<li>Hardware non flessibile rispetto alle nuove tecnologie. Volendo, ad esempio, aumentare la capacit&agrave; di una rete FDMA restringendo i canali, sarebbe necessario cambiare completamente tutto l'hardware. </li>
+<li>Non flessibilit&agrave; rispetto a nuovi servizi. Se per esempio voleste creare un collegamento a 300 BPS da una rete di sensori con un sistema FDMA, dovreste comunque occupare un intero canale, con un forte spreco. Viceversa, se avete bisogno di trasmettere 64 KBPS, avete superato le capacit&agrave; di un canale e vi dovrete dotare di pi&ugrave; trasmettitori e ricevitori per impegnare pi&ugrave; canali. </li>
+</ul>
+<p>LA SECONDA GENERAZIONE: LA TDMA. </p>
+<p>Non esistono praticamente esempi di radiodiffusione o di trasmissione amatoriale in TDMA. Il fatto &egrave; che TDMA richiede un alto grado di cooperazione tra le varie stazioni che la utilizzano; l'unica situazione in cui &egrave; conveniente la TDMA &egrave; nei collegamenti punto-punto (tra due sole stazioni) o a stella (come nel caso dei cellulari, con la stazione base al centro e molti terminali mobili che parlano con essa). </p>
+<p>Vediamo quindi le caratteristiche della TDMA: </p>
+<ul>
+<li>Richiede molta agilit&agrave; in frequenza: i sistemi TDMA richiedono trasmettitori e ricevitori in grado di attivarsi e disattivarsi, e cambiare frequenza, in tempi brevissimi, molto pi&ugrave; stretti che nella FDMA. </li>
+<li>Circuiti multipli su un solo canale: come gi&agrave; accennato, su un canale, pi&ugrave; largo, possono convivere pi&ugrave; stazioni, con una riduzione di complessit&agrave; delle infrastrutture (stazioni base). </li>
+<li>Trasmissione &quot;burst&quot;; ogni stazione deve trasmettere solo per una frazione del tempo, ad intervalli regolari. Se accoppiato a buoni metodi di compressione delle informazioni (parlato), ci&ograve; comporta dei risparmi di energia ed un miglior sfruttamento dei canali, anche se non il riutilizzo dei momenti di silenzio. </li>
+<li>Trame di trasmissione e ricezione scalate; in pratica, pur mantenendo la comunicazione di tipo telefonico, ossia full-duplex, il terminale pu&ograve; trasmettere il suo pacchetto di dati, poi passare in ricezione e, sulla stessa frequenza, ricevere il pacchetto proveniente dall'altra parte. Si pu&ograve; quindi impiegare sia un collegamento simplex, sia half-duplex, entrambi tecnicamente pi&ugrave; semplici del full-duplex. </li>
+<li>Larghezza maggiore del canale, con tutti i vantaggi accennati nelle caratteristiche dell'E-TACS. </li>
+<li>Maggiore &quot;overhead&quot;; con il fatto che la trasmissione avviene ad intervalli, la stazione ricevente &egrave; costretta a risincronizzarsi temporalmente con la trasmittente ad ogni &quot;burst&quot;; questo implica la trasmissione di caratteri di sincronizzazione a vuoto. Inoltre, data la piccolezza degli intervalli, assume una certa importanza la velocit&agrave; di propagazione delle onde radio. Basti pensare che una distanza di 10 Km. corrisponde ad un ritardo dell'ordine del microsecondo, certo non trascurabile in sistemi digitali. Occorre cio&egrave; prevedere delle &quot;fasce temporali di sicurezza&quot; per compensare la maggior o minore distanza tra stazione base e mobile. </li>
+<li>&quot;Hand-over&quot; migliorato; con i sistemi TDMA non esistono quelle brevi interruzioni audio per l'invio di dati che caratterizzano i sistemi FDMA. Su un sistema completamente digitale, audio e segnalazioni viaggiano su canali separati senza interferenze reciproche, ed anche il cambio cella &egrave; completamente trasparente. Inoltre il terminale portatile ha, tra una trasmissione e una ricezione, il tempo per esaminare altri canali per trovarne uno meno disturbato e spostarsi su quello. </li>
+<li>Architettura pi&ugrave; flessibile, interamente controllata da software. Se per esempio si trovasse il modo di ospitare dieci terminali mobili sullo stesso canale anzich&eacute; otto, attraverso ad esempio un miglior algoritmo di compressione audio, sarebbe sufficiente, entro certi limiti, sostituire il software di stazioni mobili e base, per passare alla nuova tecnologia. </li>
+<li>Maggiore flessibilit&agrave; di servizi. Con un sistema TDMA &egrave; semplicissimo occupare, con lo stesso hardware e qualche modifica al software, pi&ugrave; canali, oppure occuparne solo una parte, per adattarsi alla velocit&agrave; di trasmissione digitale desiderata. In effetti, la TDMA &egrave; la tecnica impiegata in molti progetti futuri di integrazione voce/dati in ufficio, in cui ogni persona potr&agrave; collegarsi alla rete aziendale via radio senza vincoli spaziali. </li>
+</ul>
+<p>Il prossimo passo dunque &egrave; la CDMA; ma, per i consueti motivi di spazio, ne riparleremo nella prossima puntata. </p>
+<p>73 e 51 per le vacanze natalizie de Mario. </p>
+
+<hr />
+<p><a name="figura">Le immagini non sono pi&ugrave; disponibili; mi dispiace...</a></p>
+  </div>
+    </div>
+  </body>
+</html>

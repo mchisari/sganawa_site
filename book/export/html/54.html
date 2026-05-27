@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it" xml:lang="it">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="/dosearch.js"></script>
+    <title>Radio data System: Musica ed informazioni... in contemporanea</title>
+    <base href="http://www.sganawa.org" />
+    <link type="text/css" rel="stylesheet" href="misc/print.css" />
+      </head>
+  <body>
+        
+    <div id="node-54" class="section-1">
+  <h1 class="book-heading">Radio data System: Musica ed informazioni... in contemporanea</h1>
+  <h5>Da &quot;Micro &amp; Personal Computer&quot; - Rubrica &quot;PC &amp; Radio&quot;- Aprile 1994 </h5>
+<h3>Radio data System: Musica ed informazioni... in contemporanea</h3>
+<p><em>RDS: quasi tutti l'hanno almeno sentito nominare. Volete saperne di pi&ugrave; su cos'&egrave; e come funziona? Ecco dunque il punto della situazione.</em></p>
+<h5>di Mario Chisari</h5>
+<p>La sigla RDS &egrave; strettamente collegata all'autoradio, ed in effetti questo sistema &egrave; decisamente orientato agli utenti automobilisti. Cosa c'entra allora il PC? C'entra, anche se non proprio prepotentemente. L'RDS infatti non &egrave; solo un sistema per vedere il nome della radio che stiamo ricevendo o per cambiare automaticamente canale mentre ci muoviamo, bens&igrave; un vero e proprio sistema di trasmissione di informazioni analogo al Televideo. Proviamo dunque a conoscerlo per utilizzarlo meglio, e chiss&agrave; che la sua conoscenza non porti ad inventare nuove applicazioni... </p>
+<p>L'RDS sta sicuramente vivendo un successo a cui hanno contribuito i tempi maturi per una massiccia introduzione dei microprocessori sulle autoradio (ormai il loro costo &egrave; inferiore alla meccanica di un'autoradio a manopole...) e la comodit&agrave; del sistema che, grazie alla spesso vituperata economia di mercato, ha raggiunto un costo molto contenuto. </p>
+<p>Una volta &quot;digitalizzata&quot; la radio, il passo &egrave; fatto; &egrave; possibile inventarsi tutte le funzioni che vogliamo, dalle pi&ugrave; comode alle pi&ugrave; inutili; basta un piccolo ritocco al software di gestione, si cambia la EPROM e via. </p>
+<p>In questo quadro l'RDS permette di effettuare tutta una serie di operazioni &quot;a basso livello&quot; senza l'intervento del guidatore, permettendogli cos&igrave; un ascolto sempre ottimale, una pronta informazione ed una maggiore attenzione alla guida. </p>
+<p>Come ci si pu&ograve; rendere conto facilmente osservando il riquadro 1, le funzionalit&agrave; non si limitano affatto ad un uso automobilistico, ed infatti anche i sintonizzatori casalinghi includono le funzionalit&agrave; RDS. </p>
+<p>IL BROADCAST DIGITALE ED I SUOI PROBLEMI </p>
+<p>Rispetto ai modi di trasmissione di cui ci siamo occupati finora l'RDS &egrave; interessante per un aspetto: con esso si impatta drasticamente con il problema delle trasmissioni digitali &quot;Broadcast&quot;. Tale termine indica una situazione in cui si ha una trasmittente (in genere commerciale) e moltissime riceventi, in contrapposizione a quello &quot;point-to-point&quot; in cui si ha un collegamento tra due sole stazioni. Esiste in verit&agrave; anche una situazione intermedia (multicast, in cui vi sono poche riceventi) che &egrave; una via di mezzo tra le due. </p>
+<p>In un collegamento dati tra due sole stazioni, esse sono in genere entrambe rice-trasmittenti, anche se il flusso dei dati &egrave; in una sola direzione; infatti in caso di errore &egrave; sempre possibile chiedere la ritrasmissione dei dati andati perduti (con un messaggio che vuol dire pi&ugrave; o meno &quot;non ho capito, ripeti&quot;). Questo &egrave; in effetti esattamente ci&ograve; che succede in Packet. </p>
+<p>Nel caso del broadcast se qualche informazione va persa, non vi sar&agrave; alcuna possibilit&agrave; di ripetizione; se vogliamo garantire comunque una elevata probabilit&agrave; di ricevere correttamente i dati, occorre inserire gi&agrave; in partenza una certa quantit&agrave; di informazioni ridondanti, tramite i cosiddetti codici a rilevazione e correzione d'errore. Questo vuol dire che se il numero di errori non &egrave; rilevante si possono ricostruire i dati originali, mentre in caso di troppi errori essi vengono completamente scartati per evitare ulteriori danni (pensate cosa accadrebbe se la vostra autoradio cominciasse a saltare da una frequenza all'altra all'impazzata). </p>
+<p>Per questo nell'RDS ad ogni 16 bit di dati inviati seguono ben 10 bit di controllo per la rivelazione/correzione degli errori. Tale sistema, che potrei definire &quot;di seconda generazione&quot; (la prima &egrave; quella dell'RTTY, ovvero... trasmettere lentamente, la terza &egrave; quella dei cellulari GSM e delle trasmissioni DAB, ovvero il sostituto digitale della radio FM; quest'ultima &egrave; decisamente pi&ugrave; complessa, ma anche interessante, ne riparleremo). </p>
+<p>L'invio dei dati avviene modulando una portante a 57 KHz, posta in modo da non interferire con lo spettro utilizzato dalle normali trasmissioni broadcast FM Stereo, come si vede in figura 1. </p>
+<p>La velocit&agrave; di trasmissione &egrave; di 1187.5 bit/secondo, (per comodit&agrave;, pari a 57 KHz diviso 48), quindi decisamente maggiore della gi&agrave; citata RTTY. </p>
+<p>LE FUNZIONI DELL'RDS</p>
+<p>Nel <a href="#riquadr1" target="_self">riquadro 1</a> troverete un elenco delle funzioni previste nel sistema RDS; alcune di esse sono decisamente notevoli quanto ancora sconosciute. Esaminiamole dunque pi&ugrave; in dettaglio. </p>
+<p><strong>PS</strong> &egrave; probabilmente la pi&ugrave; nota al grande pubblico, quella che permette di vedere sul display dell'autoradio il nome dell'emittente. PI invece permette di identificare in maniera univoca la stazione in tutto il mondo (vedi <a href="#riquadr2" target="_self">riquadro 2</a>). </p>
+<p><strong>AF</strong> &egrave; il servizio che consente all'autoradio di seguire la stazione man mano che ci si sposta: quando il segnale diventa debole, l'autoradio prova a spostarsi su una delle frequenze in elenco AF fino a trovarne un'altra che si sente bene. La funzione AF &egrave; gi&agrave; abbastanza raffinata, tant'&egrave; che non su tutte le autoradio &egrave; pienamente implementa: sui primi modelli, una volta persa una stazione ne veniva cercata un'altra con lo stesso PI. Tale operazione &egrave; molto pi&ugrave; lenta della ricerca in AF (un paio di minuti nelle grandi citt&agrave;, contro pochi secondi), quindi attenzione quando acquistate l'autoradio. Alcuni costruttori hanno anche cominciato a parlare di &quot;RDS level n&quot;, che per&ograve; non sembrano finora standardizzati, altri citano semplicemente le sigle delle funzioni gestite. </p>
+<p><strong>TP</strong> e <strong>TA</strong> sono due flag per la ricezione degli annunci sul traffico; se state ascoltando un CD o una cassetta, l'autoradio li interrompe non appena arriva una flag di TA, il che indica che &egrave; iniziato un bollettino del traffico; per mantenere sempre la possibilit&agrave; di ricevere questi bollettini, l'autoradio continua a monitorare solo stazioni con la flag TP accesa, cio&egrave; che prima o poi trasmetteranno questi bollettini; se l'autoradio non ne trova la situazione viene segnalata. </p>
+<p>La funzione <strong>ON</strong> &egrave; ancora pi&ugrave; flessibile; se state ad esempio ascoltando la RAI mentre una radio privata a voi vicina inizia a trasmettere un bollettino sul traffico (della vostra zona!), l'autoradio passa momentaneamente su quest'ultima per poi ritornare sulla RAI. Ci&ograve; vi consente di non ascoltare a Siracusa la situazione della tangenziale di Milano... </p>
+<p>Con la futuribile <strong>PTY</strong> la stazione segnala il tipo di programma emesso, in modo che sia possibile ad esempio cercare automaticamente un giornale radio, od un programma di musica Jazz. </p>
+<p>Legata a questa &egrave; <strong>MS</strong>, una flag che permette di distinguere tra musica e parlato, tipicamente per differenziare il volume d'ascolto. E' tuttavia da precisare che le ultime due funzioni non sono ancora diffuse a bordo delle autoradio, e comunque ben poche stazioni le utilizzano. </p>
+<p>Una futura evoluzione sar&agrave; poi il <strong>TMC</strong>, che permetter&agrave; la ricezione di informazioni sul traffico sovrapposte alle normali trasmissioni; esse potranno essere annunciate da un sintetizzatore vocale non appena necessario senza interrompere la normale programmazione. </p>
+<p>OLTRE L'AUTORADIO </p>
+<p>Oltre a questi aspetti &quot;stradali&quot;, l'RDS &egrave; pronto anche agli utilizzi pi&ugrave; disparati; vediamo quindi una funzione di cercapersone <strong>RP</strong> (pensate a quale sia la copertura del territorio nazionale delle radio FM, il Teledrin potrebbe funzionare ovunque). </p>
+<p>L'<strong>IH</strong> meriterebbe poi in discorso a parte: esso risponde alla necessit&agrave; di supervisione della rete dei grossi network, che possono cos&igrave; inviare comandi oltre che di partenza delle pubblicit&agrave; nei vari studi regionali, anche di accensione e spegnimento di ripetitori in cima alle montagne i cui sistemi di supervisione possono inviare dati di telemetria ed allarmi (segnalando ad esempio guasti ed interventi di sistemi di protezione; per inciso in televisione queste situazioni sono segnalate con i numeretti che vedete ogni tanto apparire in un angolo dello schermo televisivo). </p>
+<p>Analogo, ma per usi anche totalmente distinti dalla radio che lo trasporta, &egrave; il canale dati trasparente (<strong>TDC</strong>), che permette il trasporto di dati in forma grezza per tutto ci&ograve; che volete. </p>
+<p>Infine, assai interessante per noi computeristi &egrave; il RadioText (<strong>RT</strong>), ovvero l'equivalente del Televideo; un servizio di radiodiffusione di dati ed informazioni che in un futuro potrebbe permetterci la ricezione di notizie ed informazioni senza disturbare i programmi radio e senza nemmeno la schiavit&ugrave; di un televisore. </p>
+<p>Vedremo dunque tra qualche tempo radio ed autoradio con una presa dati seriale ? Questa possibilit&agrave; non &egrave; affatto cos&igrave; remota, a giudicare dall'evoluzione di questi ultimi anni; analoghe funzionalit&agrave; sono previste anche nel recentissimo standard di radiodiffusione digitale. Pare quindi che nel nostro futuro tecnologico ci sar&agrave; sempre pi&ugrave; Radio Data System... </p>
+<p>73 e alla prossima. </p>
+<hr />
+<h3><a name="riquadr1">Riquadro 1</a></h3>
+<h4>Funzioni dell'RDS </h4>
+<p><u>Funzioni primarie</u>:</p>
+<ul>
+<li>PI (Program Identification): Identificatore numerico unico dell'emittente. </li>
+<li>PS (Program Service Name): Identificatore (nome) alfanumerico dell'emittente. </li>
+<li>AF (Alternate Frequencies): Elenco (max 25) di frequenze alternative su cui viene irradiato lo stesso programma. </li>
+<li>TP (Traffic Program): Flag (ovvero indicatore vero/falso) che, se vero, indica che la stazione fornisce un servizio di bollettini sul traffico. </li>
+<li>TA (Traffic Announcement): Flag, vera quando &egrave; in corso un notiziario sul traffico (pu&ograve; ad esempio interrompere l'ascolto di una cassetta o del CD) </li>
+</ul>
+<p><u>Funzioni secondarie</u>: </p>
+<ul>
+<li>ON (Other Networks): Indicatore numerico di frequenze alternative su cui &egrave; in corso una trasmissione sul traffico. </li>
+<li>CT (Current Time): Indicazione numerica della data e dell'ora UTC (la conversione in ora locale &egrave; effettuata dal ricevitore). </li>
+<li>PTY (Program Type): Indicatore numerico del tipo di programma (Musica, notiziario, ecc.). </li>
+<li>PIN (Program Id. Number): Indicatore numerico del programma (utilizzabile nelle registrazioni a tempo). </li>
+<li>RT (Radio Text): Informazioni varie a pagine, analogo al &quot;Televideo&quot;. </li>
+<li>TDC (Transparent Data Channel): Canale dati trasparente, utilizzabile per radiocomandi e telecontrollo. </li>
+<li>DI (Decoder Id.): Identificatore numerico del tipo di codificatore (per utilizzo Dolby via radio, High Com ecc.). </li>
+<li>MS (Music/Speech): Commutatore tra musica e parlato, utile per due comandi di volume differenti. </li>
+<li>IH (In Home): Canale dati ad uso dell'emittente, utile per telecomandare trasmettitori, pubblicit&agrave; ecc. </li>
+<li>Funzioni addizionali: </li>
+<li>RP (Radio Paging): Cercapersone via radio. </li>
+<li>TMC (Traffic Messages Channel): Canale informazioni digitali sul traffico. </li>
+</ul>
+
+<hr />
+<h3><a name="riquadr2">Riquadro 2</a></h3>
+<p>Per tutti gli interessati al DX in FM esiste una nuova pubblicazione sull'RDS, il cui titolo &egrave; &quot;RDS-Codes in Europe&quot;. Contiene in 52 pagine circa 1000 differenti codici RDS di 24 nazioni europee, precedute dai princ&igrave;pi di funzionamento del Radio Data System ed una descrizione di un decoder software per l'Atari ST. </p>
+<p>L'elenco contiene 4 parti: </p>
+<ol>
+<li>Elenco alfabetico per paese e codice stazione, presenza di informazioni sul traffico, codice e tipo di programma, e servizio ON (quando noti); </li>
+<li>Informazioni sul RadioText, in aggiunta a 1.; </li>
+<li>Elenco in ordine di codice PI; </li>
+<li>Elenco in ordine di codice PS. </li>
+</ol>
+<p>Gli interessati possono scrivere (in inglese o tedesco, includendo una busta per la risposta) a: </p>
+<p>UKW/TV-Arbeitskreis, Hans-J&uuml;rgen Kuhlo, Harkortstr. 65, D-44225 Dortmund. </p>
+<p>o telefonare al ++49-06151-838192 (8-15h) </p>
+<p>(Info by Frank DB9DT @ DB0CL) </p>
+  </div>
+    
+  </body>
+</html>

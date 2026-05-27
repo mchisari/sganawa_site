@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it" xml:lang="it">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="/dosearch.js"></script>
+    <title>Fenomeno BayCom (quarta parte)</title>
+    <base href="http://www.sganawa.org" />
+    <link type="text/css" rel="stylesheet" href="misc/print.css" />
+      </head>
+  <body>
+              <div class="section-1">
+          
+    <div id="node-79" class="section-2">
+  <h1 class="book-heading">Fenomeno BayCom (quarta parte)</h1>
+  <h5>Da &quot;Micro &amp; Personal Computer&quot; - Rubrica &quot;PC &amp; Radio&quot;- Giugno/luglio 1997</h5>
+<h3><strong><strong>Fenomeno BayCom (quarta parte)</strong></strong></h3>
+<p><em>Il programma BayCom ha dato origine ad una serie di utilit&agrave; con esso &quot;compatibili&quot;, che ci danno la libert&agrave; di impiegare indifferentemente un modem o un TNC con gli stessi programmi.</em></p>
+<h5>di Mario Chisari IW0CDT</h5>
+<p>Il Baycom ha avuto il merito di portare al successo il modem omonimo; trattandosi di un'alternativa economica ma efficiente ad un ben pi&ugrave; costoso e pi&ugrave; raffinato apparato di controllo del nodo, il TNC, &egrave; facile capire perch&eacute; molti abbiano provato ad usare lo stesso hardware con altri programmi di terminale. </p>
+<p>Dapprima sono nati programmi con la stessa struttura del BayCom (un gestore del dispositivo seriale ed un programma di terminale); pi&ugrave; avanti &egrave; nata l'idea di emulare direttamente l'intero TNC da software. Questo stratagemma consente di utilizzare il modem BayCom con qualsiasi programma di terminale desiderato, poich&eacute; esso non noter&agrave; alcuna differenza con un TNC vero. </p>
+<p>VERSO LA VIRTUALIZZAZIONE </p>
+<p>Ecco quindi che diventa possibile comporre la propria stazione Packet combinando in vario modo l'hardware ed il software; tutto grazie alla scelta tra vari &quot;mattoni&quot; che, composti uno sopra l'altro, ottengono il risultato della massima flessibilit&agrave; ed indipendenza dall'hardware. Possiamo cos&igrave; risparmiare usando il BayCom, per poi spendere un po' di pi&ugrave; con un TNC che garantisce la nostra presenza &quot;in aria&quot; anche a TNC spento. </p>
+<p>Ci possono essere diversi motivi per utilizzare un altro terminale che non sia il BayCom: perch&eacute; intendete utilizzare la raccolta automatica delle intestazioni dei messaggi (&quot;broadcast&quot;) offerta dalla BBS Packet a cui vi collegate; o perch&eacute; trovate troppo macchinoso il modo in cui BayCom gestisce il trasferimento dei file in protocollo YAPP (normalmente usati in Italia); o, semplicemente, siete gi&agrave; affezionati ad un certo programma di terminale Packet, tanto da non volerlo cambiare con quello BayCom. </p>
+<p>Se siete in una di queste situazioni, potete utilizzare uno dei diversi gestori del modem BayCom. Essi sono in grado di interporsi tra il programma di terminale e l'hardware, virtualizzandolo, ossia svincolandolo dalla sua effettiva natura. In questo modo, il programma di terminale potr&agrave; comandare indifferentemente un TNC, un modem BayCom, o una scheda multiseriale come quelle presentate nella scorsa puntata. </p>
+<p>L'unica difficolt&agrave; sta nel fatto che il gestore non &egrave; ovviamente in grado di emulare direttamente l'hardware della seriale; molti terminali viceversa pretendono di gestire direttamente l'hardware per la necessit&agrave; di aggirare le pesantissime limitazioni del sistema operativo (si tratta di un retaggio del primo PC IBM mai completamente superato...). </p>
+<p>&Egrave; quindi giocoforza l'utilizzo di terminali che nascano predisposti all'utilizzo di un gestore esterno. Per nostra fortuna, la maggior parte &egrave; ormai cos&igrave;, grazie proprio alla diffusione prorompente del BayCom: &egrave; sufficiente configurarli per scambiare dati usando, anzich&eacute; l'hardware, un'interruzione (interrupt) software. </p>
+<p>I GESTORI BAYCOM, OVVERO I &quot;TNC VIRTUALI&quot; </p>
+<p>Quali gestori &egrave; possibile allora utilizzare? La prima scelta cadrebbe sull'L2 del BayCom stesso; esso per&ograve; non ha avuto alcun successo come gestore di dispositivo, per mancanza di documentazione o per le restrizioni di distribuzione a cui &egrave; sottoposto. </p>
+<p>In genere, come potete vedere in tabella, &egrave; molto diffuso il TFPCX (l'acronimo sta per l'altrettanto criptico &quot;The Firmware PC Extended&quot;); esso, molto simile all'L2, &egrave; in pratica un'estensione del BIOS del PC che fa da gestore per l'interfaccia &quot;modem BayCom&quot;. </p>
+<p>Lanciando il TFPCX con gli oppurtuni parametri (porta COM da utilizzare, velocit&agrave;, ecc.), esso si installa in memoria agganciandosi ad un vettore d'interruzione software. Ora tramite esso tutti i programmi DOS possono inviare e ricevere dati in formato Packet sull'interfaccia BayCom. Il TFPCX si occupa di aprire, mantenere e chiudere i canali virtuali, e di gestire ricezione e trasmissione, nonch&eacute; la correzione automatica. </p>
+<p>Altro programma che svolge la funzione di gestore &egrave; il BPQAX25. Esso funziona allo stesso modo del TFPCX, con la differenza di essere compatibile con BPQ, un gestore che supporta anche le funzionalit&agrave; di nodo multiporta (&egrave; usato su molti BBS per gestire le varie porte - o frequenze - su cui gli utenti possono collegarsi, e per rilanciare i pacchetti da una porta all'altra). </p>
+<p>Infine l'AX25DRV &egrave; un &quot;Packet Driver&quot; ovvero un gestore che fa vedere la seriale a tutti gli effetti come una scheda di rete. Su esso potete installare - ad esempio - il TCP/IP od un qualsiasi protocollo di rete che supporti il &quot;packet driver&quot;, e realizzare una rete ethernet via radio! </p>
+<p>Per quest'ultima utilizzazione &egrave; molto diffuso un &quot;terminale&quot; (in realt&agrave; &egrave; pi&ugrave; un sistema operativo) che gestisce il protocollo TCP/IP sotto DOS: il celebre NOS di KA9Q. In alternativa potete installare il sistema operativo Linux, un vero e proprio Unix con supporto nativo della rete via radio, per il quale esistono i relativi gestori per modem BayCom. </p>
+<p>I PROGRAMMI DI TERMINALE </p>
+<p>Che programmi di terminale si possono usare con questi gestori? Ad esempio il celebre TPK, di cui abbiamo parlato qualche mese fa; esso per&ograve; ha bisogno di un piccolo programma residente &quot;adattatore&quot; (una specie di &quot;zeppa&quot;) che si chiama &quot;TNCDED&quot; per interfacciarsi con TFPCX. I due programmi TFPCX e TNCDED sono forniti in un unico archivio TPK-BCOM.ZIP incluso nelle nuove versioni di TPK, che quindi ormai supporta ufficialmente il modem BayCom. Lo stesso TPK tuttavia pu&ograve; usare altri programmi, per &quot;girare&quot; su un nodo BPQ (fare sempre riferimento alla tabella) che utilizza modem BayCom. </p>
+<p>Altri programmi, come gli ottimi TSTHost e Graphic Packet, pilotano senza alcuna difficolt&agrave; direttamente il TFPCX. </p>
+<p>Insomma come potete vedere, oggi &egrave; possibile utilizzare il modem BayCom con i pi&ugrave; noti programmi di terminale, esattamente come se si trattasse di un TNC, ed addirittura &egrave; possibile farlo in protocollo TCP/IP. </p>
+<p>Nuove frontiere che affronteremo nei prossimi appuntamenti. </p>
+<p>73 de Mario </p>
+<p>(4. fine) </p>
+<hr />
+<h3>Tabella 1</h3>
+<p>Le diverse architetture per usare il modem BayCom con i pi&ugrave; noti programmi di terminale per il Packet Radio </p>
+<table cellpadding="1" border="1" align="DEFAULT">
+<tr>
+<td width="110" align="center">Programma di terminale usato -&gt;
+<p> Driver <br /> |<br /> V</p></td>
+<td width="63" align="center"><em>BayCom</em></td>
+<td width="154" align="center" colspan="2"><em>TPK</em></td>
+<td width="97" align="center"><em>Eskay Packet <br /> (prg. commerciale)</em></td>
+<td width="69" align="center"><em>Graphic Packet / TSTHost</em></td>
+<td width="80" align="center"><em>KA9Q NOS</em></td>
+</tr>
+<tr>
+<td width="110" align="center"><em>Eventuale programma adattatore (&quot;zeppa&quot;)</em></td>
+<td width="63" align="center" rowspan="3"><em>L2</em></td>
+<td width="83" align="center"><em>BPQHTNC2</em></td>
+<td width="71" align="center" rowspan="2"><em>TNCDED</em></td>
+<td width="97" align="center" rowspan="3"><em>TFPCX</em></td>
+<td width="69" align="center" rowspan="3"><em>TFPCX</em></td>
+<td width="80" align="center" rowspan="3"><em>AX25DRV</em></td>
+</tr>
+<tr>
+<td width="110" align="center"><em>Gestore di nodo (per sistemi a pi&ugrave; canali -multiseriale)</em></td>
+<td width="83" align="center"><em>BPQCODE</em></td>
+</tr>
+<tr>
+<td width="110" align="center"><em>Gestore di seriale</em></td>
+<td width="83" align="center">BPQAX25</td>
+<td width="71" align="center">TFPCX</td>
+</tr>
+<tr>
+<td width="561" align="center" colspan="7">HARDWARE (Seriale standard collegata a modem BayCom) </td>
+</tr>
+</table>
+<p>AVVISO: Per completezza abbiamo incluso i programmi &quot;Eskay Packet&quot; (un software commerciale) Graphic Packet e TSTHost, ancora non presentati in questa rubrica; esse saranno oggetto di prossime puntate. </p>
+<hr />
+<h3>Ma in Italia i Radioamatori contano qualcosa?</h3>
+<p>&Egrave; una domanda non troppo provocatoria, questa, visto i recenti episodi di mancanza di raccordo tra essi ed il Ministero delle Poste. Dapprima la presentazione del nuovo regolamento che conteneva delle palesi incongruenze e inutili limitazioni; per fortuna sembra che il deciso intervento delle associazioni di categoria presso il Ministero abbia orientato quest&rsquo;ultimo su misure pi&ugrave; sensate. Adesso, per&ograve;, una nuova ed incomprensibile novit&agrave;: sempre il Ministero ha deciso di autorizzare la banda da 433.050 a 434.790 per nuovi apparati di radiocomunicazione denominati &quot;LPD&quot;, dalla potenza massima di 10 milliwatt. Per utilizzare uno di questi apparati &egrave; sufficiente una domanda in carta da bollo ed un versamento di 15.000 lire l&rsquo;anno. </p>
+<p>La banda radioamatoriale da 430 a 440 MHz &egrave; stata assegnata dalla Conferenza Mondiale delle Telecomunicazioni (WRC) del 1979 al servizio di radioamatore, decisione recepita in Italia con un DPR del 1981; nel 1983 il Ministero PPTT restringeva tale banda a 432-438, con uno strascico di dubbi sul fatto che potesse farlo senza l&rsquo;autorizzazione del Governo. Nel 1986 il Ministero ha dichiarato la banda 433-434 MHz in uso ai radioamatori come servizio secondario, in promiscuit&agrave; con altri servizi pubblici (es. pubblica sicurezza); poi nel 1992 ha cominciato ad assegnare autorizzazioni ai telecomandi industriali nella porzione 433.050-434.790. Infine la nuova destinazione, che rischia di permettere agli LPD, in mano a persone senza conoscenze tecniche, di andare a disturbare Polizia, Vigili del Fuoco, e ingressi di ponti ripetitori radioamatoriali (tra 433.600 e 433.800), che ritrasmetterebbero il loro &quot;debole segnale&quot; in tutta Italia&hellip; </p>
+  </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it" xml:lang="it">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="/dosearch.js"></script>
+    <title>Vi presento Morse (seconda e ultima parte)</title>
+    <base href="http://www.sganawa.org" />
+    <link type="text/css" rel="stylesheet" href="misc/print.css" />
+      </head>
+  <body>
+              <div class="section-1">
+          
+    <div id="node-57" class="section-2">
+  <h1 class="book-heading">Vi presento Morse (seconda e ultima parte)</h1>
+  <h5>Da &quot;Micro &amp; Personal Computer&quot; - Rubrica &quot;PC &amp; Radio&quot;- Giugno 1994 </h5>
+<h2>Vi presento Morse (seconda e ultima parte)</h2>
+<p><em>Dopo la presentazione della scorsa puntata sarete magari stati presi dalla voglia di imparare la ricezione della telegrafia ad &quot;orecchio&quot;. Se non &egrave; cos&igrave;, ecco giungere in vostro aiuto la soluzione &quot;computeristica&quot;.</em></p>
+<h5>di Mario Chisari</h5>
+<p>In pratica, attualmente la telegrafia &egrave; impiegata quasi esclusivamente dai radioamatori, dai militari e polizie e per le comunicazioni da e per le navi in navigazione. Tra queste ultime la radiotelegrafia &egrave; tuttora estremamente diffusa: infatti, nonostante la concorrenza dei sistemi di assistenza satellitari e radiotelescriventi cominci a farsi sentire, le particolari condizioni di impiego continuano a rendere interessante il CW: la velocit&agrave; ridotta non &egrave; un problema (ridotta relativamente, visto che i marconisti delle navi sono i manipolatori pi&ugrave; veloci al mondo, superando agevolmente i 100 caratteri al minuto!), mentre la possibilit&agrave; di comunicare con poca potenza ed apparecchiature essenziali a distanze enormi &egrave; perfetta anche per le situazioni di emergenza. </p>
+<p>Un esempio &egrave; nel campo dei sistemi &quot;SAR&quot; (Search and Rescue, cio&eacute; ricerca e soccorso); in uno di questi, attivato gi&agrave; parecchi anni fa, il funzionamento &egrave; totalmente automatico, grazie ad un automa di ricetrasmissione che opera in telegrafia. Qualunque nave che lo desidera pu&ograve; iscriversi al sistema, comunicando l'avvenuta partenza dal porto e la destinazione prevista; da quel momento, ed ogni volta che lo ritiene necessario, la nave trasmette al sistema la propria posizione, velocit&agrave; e rotta. Se il sistema non riceve notizie della nave per pi&ugrave; di due giorni scatta l'allarme, ed in caso la nave risulti effettivamente dispersa i soccorritori hanno informazioni preziose per concentrare le ricerche in una zona ristretta. </p>
+<p>Nel campo dei radioamatori, pur essendo state inventate le pi&ugrave; diverse diavolerie per automatizzare la telegrafia (tanto che qualche anno si era discusso di sostituire all'esame di radioamatore col tasto quello di utilizzo di una tastiera di un computer), la stragrande maggioranza continua a preferire metodi tradizionali. </p>
+<p>Queste trasmissioni non hanno il minimo carattere di regolarit&agrave;, ma hanno il sapore della vera passione per la radio ed il collegamento a lunga distanza; se si &egrave; abbastanza pazienti e fortunati &egrave; possibile captare un segnalino proveniente dall'altro capo del mondo trasmesso con mezzi che sembrerebbero assolutamente inadeguati. </p>
+<p>Ad esempio, narra la leggenda che pi&ugrave; di venti anni fa, prima della nascita della cosiddetta &quot;banda cittadina&quot; (CB), era possibile ascoltare in dieci metri un missionario nicaraguense che era innamorato della radio ma non possedeva neanche i soldi per comprarsi un microfono... </p>
+<p>ALLA CACCIA DEL CW </p>
+<p>Il problema fondamentale del CW &egrave; la cancellazione del rumore; non avrebbe senso infatti usarlo per comunicazioni che non siano a lunga distanza, ed in tali condizioni &egrave; sempre presente una notevole quantit&agrave; di disturbi ed interferenze di vario genere, soprattutto nel caso in cui la qualit&agrave; del ricevitore non &egrave; eccelsa. </p>
+<p>Per ricevere la telegrafia (su qualunque banda) occorre un ricevitore almeno in SSB, ma molto meglio sarebbe uno apposito per il CW, che &egrave; molto pi&ugrave; selettivo; ve ne accorgerete quando proverete a sintonizzarvi in banda marina, dove i canali sono spaziati di soli 500 Hertz, e quindi con un normale ricevitore SSB sentirete quattro o cinque stazioni contemporaneamente... </p>
+<p>La demodulazione automatica del CW, ed ancor di pi&ugrave; la trasmissione, sono particolarmente semplici utilizzando un computer, date le velocit&agrave; sempre relativamente basse. </p>
+<p>Il primo programma con cui &egrave; possibile ricevere la telegrafia &egrave; l'HamComm, gi&agrave; presentato in questa rubrica esattamente un anno fa. </p>
+<p>Con la sua semplicissima interfaccia (che, ricordiamolo, costa poche migliaia di lire e fa uso di un solo comunissimo circuito integrato), peraltro descritta estesamente nell'help del programma, &egrave; gi&agrave; possibile ricevere discretamente segnali anche non proprio pulitissimi. </p>
+<p>Questo risultato tutto sommato sorprendente &egrave; ottenuto grazie ad un filtraggio &quot;software&quot; del segnale ricevuto. </p>
+<p>Come si procede dunque? </p>
+<p>Per prima cosa occorre sintonizzare il segnale da ricevere fino ad ascoltare una nota robusta e pulita; dopo aver collegato l'interfaccia alla radio si pone l'HamComm in modo &quot;spectrum&quot;, e si osserva lo spettro in frequenza del segnale ricevuto (in realt&agrave; &egrave; un'indicazione molto approssimativa, vista la brutalit&agrave; del decodificatore...); si osserver&agrave; cio&egrave; un grafico &quot;a campana&quot;, dai contorni in movimento. Il centro della campana &egrave; dovuto (se mancano forti interferenze), al segnale ricevuto, mentre tutto ci&ograve; che &egrave; attorno non &egrave; altro che rumore e disturbi che vogliamo eliminare... Fate anche una piccola prova: spostando la sintonia della radio cambier&agrave; la nota ricevuta, ed anche la campana sullo schermo si sposter&agrave; verso sinistra se la nota si abbassa, oppure verso destra se si alza. Bene, adesso avete un'idea di cosa sia un analizzatore di spettro (che non &egrave;, come potrebbe sembrare, un'apparecchio per fare l'esame del sangue ai fantasmi...). Per selezionare solo il segnale ricevuto dovete spostare la frequenza centrale del filtro software; attivate quindi il modo &quot;tune&quot; e spostate con i tasti con le frecce la frequenza del filtro fino a farla coincidere con quella del segnale ricevuto, che vi apparir&agrave; adesso come un puntino frequentemente lampeggiante. Eventualmente potete ritoccare anche la sintonia della radio, per cercare di ridurre il pi&ugrave; possibile altri segnali interferenti. </p>
+<p>Una volta effettuate queste regolazioni ci si pone un modo ricezione CW; il programma, analizzando il segnale, si aggancia rapidamente alla frequenza di trasmissione senza altri interventi, e comincia a scrivere... </p>
+<p>Probabilmente all'inizio vi apparir&agrave; tutto incomprensibile; un po' qualche lingua sconosciuta, un po' le abbreviazioni misteriose, un po' la mancata conoscenza di ci&ograve; di cui si parla; in ogni caso un certo aiuto ve lo pu&ograve; dare l'apposito <a href="#riquadro2" target="_self">ri.quadro</a> sulle sigle ed abbreviazioni. </p>
+<p>LE FREQUENZE DI RICEZIONE </p>
+<p>Abbiamo visto che i maggiori utilizzatori del CW oggigiorno sono i radioamatori e i servizi marittimi. Per quanto riguarda questi ultimi, la stazione principale del mediterraneo, ed una delle pi&ugrave; attive nel mondo, &egrave; sicuramente Roma Radio (nominativo IAR), che gestisce in HF sia traffico telegrafico (informazioni meteo, liste di chiamata) che telefonico in SSB (per permettere ai naviganti di tenersi in contatto via telefono con chiunque; quest'ultimo funziona anche in VHF FM). </p>
+<p>Ecco le &quot;fette&quot; di banda HF allocate per le stazioni marittime costiere in CW (le navi trasmettono circa 120 KHz sotto, ma ovviamente sono pi&ugrave; rare da ascoltare): da 4222 a 4349 KHz, da 6332 a 6500 KHz, da 8437 a 8706 KHz, da 12658 a 13077 KHz, da 16904 a 17240 KHz, da 22446 a 22696 KHz. </p>
+<p>I radioamatori hanno invece un segmento riservato alla telegrafia pressocch&eacute; su tutte le bande, dalle onde medie alle SHF, a testimonianza dell'interesse tuttora vivo per questo storico sistema di comunicazione. Tradizionalmente, per&ograve;, i segmenti pi&ugrave; utilizzati sono nella parte bassa delle bande dei 20 e 15 metri, corrispondenti alle frequenze di 14.000-14.350 e 21.000-21.450 MHz, su cui operano anche molti trasponder dei satelliti. </p>
+<p>Molto usate sono anche le VHF, da 144 a 144.500 MHz. </p>
+<p>E con questo, vi auguro una buona ricezione del CW, e, mai pi&ugrave; di ora, buoni DX! </p>
+<hr />
+<p><a name="riquadro1">RIQUADRO 1</a> </p>
+<p>I &quot;BUG&quot; NON SONO SOLO NEL SOFTWARE... </p>
+<p>La storia del Morse &egrave; anche rincorsa della velocit&agrave;; e per creare il tasto &quot;ideale&quot;, veloce e riposante, si sono rincorse con il passare del tempo varie soluzioni . </p>
+<p>Il problema &egrave; che all'aumentare della velocit&agrave; cresce considerevolmente la fatica del polso che &egrave; il principale attore della manipolazione, soprattutto durante la formazione dei punti. </p>
+<p>Storicamente la prima soluzione &egrave; stata meccanica; ovvero un tasto che permette, tramite l'introduzione di un piccolo pendolo, di generare automaticamente i punti, lasciando all'operatore il compito di generare le linee. </p>
+<p>Questo tasto, detto semiautomatico, &egrave; stato anche soprannominato &quot;bug&quot;; gi&agrave;, proprio come i fastidiosi difetti che si manifestano nel software; in realt&agrave; tale nome deriva probabilmente da quelle che sembrano due robuste ali da coleottero... Il bug infatti non ha un tasto a movimento verticale, bens&igrave; una doppia paletta da prendere tra pollice ed indice che oscilla in senso orizzontale; da un lato genera i punti e dall'altro le linee. </p>
+<p>Nei tempi in cui l'elettronica cominci&ograve; ad essere accessibile a tutti, ma i computer costavano ancora troppo, cominci&ograve; a diffondersi il tasto cosiddetto &quot;automatico&quot;; in esso la meccanica del bug &egrave; totalmente sostituita dall'elettronica, che si occupa di generare sia i punti che le linee in base alla pressione delle due palette. I pi&ugrave; raffinati erano dotati di una memoria che consentiva di registrare e riprodurre anche a velocit&agrave; diversa una serie di pressioni (!). </p>
+<p>Il passo successivo &egrave; ovviamente il computer; l'utilizzo della tastiera maschera totalmente il sistema Morse, tantopi&ugrave; che spesso lo stesso computer &egrave; in grado di decodificare i segnali ricevuti. Eppure, oggi ben pochi radioamatori usano il computer per il CW, e molti sono ancora pi&ugrave; soddisfatti con un classico tasto verticale. </p>
+<p>Giusto orgoglio o masochismo? Provate e giudicate...</p>
+<p>(2. fine) </p>
+<hr />
+<p><a name="riquadro2">RIQUADRO 2</a> </p>
+<p>LE ABBREVIAZIONI PIU' COMUNI </p>
+<table width="100%" cellspacing="2" cellpadding="2" border="1" align="DEFAULT">
+<tr>
+<td>AA</td>
+<td>(All After ...) Tutto dopo ...</td>
+</tr>
+<tr>
+<td>AB</td>
+<td>(All Before ...) Tutto prima di ...</td>
+</tr>
+<tr>
+<td>ABT</td>
+<td>(About) Circa </td>
+</tr>
+<tr>
+<td>AGN</td>
+<td>(Again) Ancora</td>
+</tr>
+<tr>
+<td>ANS</td>
+<td>(Answer) Risposta</td>
+</tr>
+<tr>
+<td>AR</td>
+<td>Fine trasmissione (trasmesso come unico segnale .-.-.)</td>
+</tr>
+<tr>
+<td>AS </td>
+<td>Attendere (trasmesso come unico segnale .-...)</td>
+</tr>
+<tr>
+<td>BC </td>
+<td>(Broadcast) Larga diffusione</td>
+</tr>
+<tr>
+<td>BT </td>
+<td>Segno di interruzione (trasmesso come unico segnale -...-)</td>
+</tr>
+<tr>
+<td>CK</td>
+<td> (Check) Verificare</td>
+</tr>
+<tr>
+<td>CS </td>
+<td>(Call Sign) Nominativo</td>
+</tr>
+<tr>
+<td>DCT </td>
+<td>(Direct) Diretto</td>
+</tr>
+<tr>
+<td>DE </td>
+<td>Da</td>
+</tr>
+<tr>
+<td>DR</td>
+<td>(Dear) Caro, cara</td>
+</tr>
+<tr>
+<td>DUPE </td>
+<td>Questo &egrave; un messaggio duplicato</td>
+</tr>
+<tr>
+<td>EL </td>
+<td>(Element) Elemento</td>
+</tr>
+<tr>
+<td>ER </td>
+<td>(Here) Qui</td>
+</tr>
+<tr>
+<td>FM </td>
+<td>(From) Da </td>
+</tr>
+<tr>
+<td>FOXES </td>
+<td>(The quick brown fox jumps over the lazy dog) Frase di prova che contiene tutti i caratteri </td>
+</tr>
+<tr>
+<td>FYI </td>
+<td>(For Your Information) Per vostra informazione </td>
+</tr>
+<tr>
+<td>GD </td>
+<td>(Good) Buono</td>
+</tr>
+<tr>
+<td>HI </td>
+<td>Risata </td>
+</tr>
+<tr>
+<td>HPA</td>
+<td> (Hectopascal) Ettopascal, pari a circa 1 millibar</td>
+</tr>
+<tr>
+<td>IMI </td>
+<td>Segno di interrogazione (trasmesso come unico segnale ..--..)</td>
+</tr>
+<tr>
+<td>INT </td>
+<td>(Interrogation) Interrogativo</td>
+</tr>
+<tr>
+<td>K </td>
+<td>Invito a trasmettere</td>
+</tr>
+<tr>
+<td>KA </td>
+<td>Inizio trasmissione (trasmesso come unico segnale -.-.-) </td>
+</tr>
+<tr>
+<td>MSG </td>
+<td>(Message) Messaggio</td>
+</tr>
+<tr>
+<td>OM</td>
+<td> (Old Man) Radioamatore</td>
+</tr>
+<tr>
+<td>PSE </td>
+<td>(Please) Per favore</td>
+</tr>
+<tr>
+<td>RQ </td>
+<td>(Request) Richiesta</td>
+</tr>
+<tr>
+<td>RPT</td>
+<td>(Repeat) Ripetere</td>
+</tr>
+<tr>
+<td>VA</td>
+<td>Fine lavoro(trasmesso come unico segnale ...-.-)</td>
+</tr>
+<tr>
+<td>VVV</td>
+<td>Segnale di richiamo o prova</td>
+</tr>
+<tr>
+<td>VY</td>
+<td>(Very) Molto</td>
+</tr>
+<tr>
+<td>WX</td>
+<td>(Weather) Condizioni atmosferiche</td>
+</tr>
+<tr>
+<td>Z</td>
+<td>Ora Universale</td>
+</tr>
+<tr>
+<td>73</td>
+<td>Saluti</td>
+</tr>
+</table>
+<hr />
+<p>Fig. 1 (perduta, mi dispiace...): La funzione &quot;spectrum&quot; dell'HamComm mostra un forte segnale in CW; il programma &egrave; ben sintonizzato, il che &egrave; dimostrato dal fatto che le due righe verdi racchiudono esattamente nel centro il segnale. Appena passato in modo CW, il programma ha iniziato a decodificare correttamente... </p>
+  </div>
+    </div>
+  </body>
+</html>

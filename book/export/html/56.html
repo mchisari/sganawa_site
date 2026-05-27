@@ -1,0 +1,300 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it" xml:lang="it">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="/dosearch.js"></script>
+    <title>Vi presento Morse (prima parte)</title>
+    <base href="http://www.sganawa.org" />
+    <link type="text/css" rel="stylesheet" href="misc/print.css" />
+      </head>
+  <body>
+              <div class="section-1">
+          
+    <div id="node-56" class="section-2">
+  <h1 class="book-heading">Vi presento Morse (prima parte)</h1>
+  <h5>Da &quot;Micro &amp; Personal Computer&quot; - Rubrica &quot;PC &amp; Radio&quot;- Maggio 1994 </h5>
+<h2>Vi presento Morse (prima parte)</h2>
+<p><em>Il pi&ugrave; antico e glorioso metodo di trasmissione oggi &egrave; considerato da qualcuno la cenerentola della radio. Eppure esso sopravvive e si evolve, continuando a rendere i suoi incredibili servigi, l&agrave; dove nessun'altra modulazione riesce a giungere...</em></p>
+<h5>di Mario Chisari</h5>
+<p>Questa volta siamo tornati davvero indietro nel tempo; correva l'anno 1835 quando Samuel Morse comp&igrave; un salto tecnologico pensando di sfruttare una semplice coppia di fili e la corrente elettrica per trasmettere a distanza dei messaggi scritti. Per fare ci&ograve;, egli dovette inventare un sistema di codifica, ovvero una rappresentazione (digitale!) per lettere e numeri, e lo fece in modo che i simboli pi&ugrave; usati avessero la codifica pi&ugrave; breve, in modo da rendere pi&ugrave; brevi le trasmissioni (oggi si parlerebbe di compressione di Huffmann...). Per questo la lettera &quot;E&quot; &egrave; data da un solo punto, mentre la &quot;Q&quot; ha durata equivalente di 13 punti. </p>
+<p>L'alfabeto che ancor oggi porta il nome di Morse nacque dunque per le trasmissioni via filo, ma &egrave; stato adottato dalla radio fin dalla nascita di quest'ultima. Da questo riuscitissimo matrimonio &egrave; nato il CW, abbreviazione di Countinuous Wave, ovvero onda continua; che fa capire come la trasmissione fosse effettuata interrompendo un'oscillazione generata da qualche circuito (pensate alle vecchie radio a valvole...). </p>
+<p>CI VUOLE IL GIUSTO RITMO </p>
+<p>La telegrafia &egrave; un mezzo di comunicazione assolutamente primitivo se paragonato con le moderne tecniche, e quindi totalmente alieno da termini strani o parametri astrusi, come &quot;shift&quot; o sottoportanti; l'unico parametro significativo &egrave; la velocit&agrave;, solitamente espressa in WPM (alias Words per Minute, o parole al minuto). Si tratta del numero medio di parole trasmesse da un telegrafista medio? Nulla di tutto ci&ograve; . Nella notte dei tempi &egrave; stato semplicemente stabilito che la parola &quot;media&quot; &egrave; &quot;paris &quot; (seguita da uno spazio). Questa assunzione &egrave; rimasta valida anche nella RTTY. Niente complicati calcoli statistici, dunque... </p>
+<p>Vediamo come &egrave; possibile calcolare la durata di un punto, che &egrave; la durata base di qualsiasi trasmissione (si potrebbe dire il &quot;clock&quot;). </p>
+<p>Le norme prescrivono che la linea duri esattamente tre punti; ogni simbolo (punto o linea) dev'essere separato dalla durata di un punto, ogni carattere da tre punti e lo spazio (tra una parola e l'altra) dura in tutto 5 punti; facendo le somme, la durata della parola media &quot;paris&quot; &egrave; dunque di 48 punti. </p>
+<p>Da questa definizione &egrave; facile risalire a quella dei &quot;caratteri al minuto (CPM)&quot;: ancora &quot;paris&quot;, e 1 WPM corrisponde esattamente a 5 CPM... </p>
+<p>Tutto questo per&ograve; in teoria, in quanto in pratica gli operatori umani hanno spesso la tendenza a variare queste regole, tanto che normalmente la durata di una linea pu&ograve; avvicinarsi a quella di due punti, o essere molto pi&ugrave; lunga di tre. Un orecchio molto allenato riesce anche grazie a questo a distinguere se ad effettuare la trasmissione &egrave; un umano od un automa; e anche qualsiasi software di ricezione automatica deve tenere conto di ci&ograve; . </p>
+<p>COSA OFFRE IL SOFTWARE </p>
+<p>Pur se il CW &egrave; nato per un utilizzo essenzialmente &quot;umano&quot; (e la RTTY in realt&agrave; non &egrave; altro che la sua modifica in senso pi&ugrave; &quot;meccanico&quot;), i computer di oggi non hanno grosse difficolt&agrave; a trattarlo. Tra i diversi software disponibili abbondano i programmi per la ricezione e la trasmissione; tra essi troviamo una vecchia conoscenza: l'HAMCOMM, che avevamo gi&agrave; presentato nei numeri di luglio e settembre '93 per la ricezione economica della RTTY. </p>
+<p>Se poi snobbate l'idea di utilizzare un computer per la nobile telegrafia, potete sempre imparare a riceverla ad orecchio... con un computer! </p>
+<p>L'esame pratico di ricezione e trasmissione in CW, sebbene a velocit&agrave; abbastanza bassa, &egrave; obbligatorio per qualunque radioamatore che voglia trasmettere nelle HF, ove &egrave; facile parlare con tutto il mondo. </p>
+<p>Quale inusuale esempi di applicazioni &quot;educational&quot;, si possono dunque trovare un certo numero di programmi per l'apprendimento guidato della telegrafia; &egrave; possibile anche simulare un vero esame, sia in ricezione che in trasmissione. </p>
+<p>Tra questi cito gli ottimi Morse-Tutor 1.0 di DF7FA (Germania, documentazione in tedesco e inglese), l'italiano CW Tutor 3.0 di IK1LAH (Fig. 1) e Morse Tutor 3.0b di N0IAI (USA) in Inglese; la nazionalit&agrave; &egrave; importante in quanto le modalit&agrave; d'esame variano da paese a paese. Particolarmente curata nel primo &egrave; la possibilit&agrave; di verificare le proprie capacit&agrave; di &quot;manipolatore&quot; utilizzando come tasto il mouse od un collegamento esterno sulla seriale. </p>
+<p>LA TELEGRAFIA OGGI </p>
+<p>A dispetto dell'et&agrave; , la telegrafia &egrave; ancora oggi la modulazione principe per i collegamenti in condizioni disperate. La bassa velocit&agrave; vuol dire ristrettissima larghezza di banda (non &egrave; raro trovare ricevitori che incorporano filtri con larghezza di 100 Hertz); poich&eacute; il rumore &egrave; distribuito con densit&agrave; costante su tutte le frequenze, banda ristretta vuol dire pochissimo rumore, e quindi possibilit&agrave; di collegamenti a distanze enormi. </p>
+<p>Spesso sentiamo parlare delle straordinarie scoperte dei satelliti di esplorazione che viaggiano ai limiti del nostro sistema solare, ma non facciamo mente locale al grosso problema delle comunicazioni con questi oggetti, che dispongono di pochissima potenza e operano da una distanza alla quale i segnali radio giungono dopo oltre mezz'ora di viaggio. </p>
+<p>Ebbene, in tali condizioni l'unico sistema di trasmissione ancora usabile &egrave; il CW coerente (cosa indica tale temine lo vedremo quando parleremo di DSP). Il ricevitore sulla terra ha una larghezza di banda di 2 Hertz (alla frequenza di 2.5 GHz!), con una sensibilit&agrave; limite di -200 dBm, che corrisponde circa a un miliardesimo di quanto riesca a fare un buon ricevitore &quot;terrestre&quot;. </p>
+<p>Questo non vuol dire che per potersi collegare con un corrispondente italiano o europeo non possa essere preferibili magari utilizzare mezzi pi&ugrave; veloci e comodi; tuttavia basta ci&ograve; a far capire il ruolo tuttora insostituibile della telegrafia. </p>
+<p>Ma lo vedremo meglio la prossima volta.</p>
+<hr />
+<h3><a name="riquadro1">Codice Morse</a></h3>
+<table width="100%" border="0" align="center">
+<tr>
+<td align="left">
+<table cellspacing="2" cellpadding="2" border="1" align="DEFAULT">
+<tr>
+<td>A</td>
+<td>.-</td>
+</tr>
+<tr>
+<td>B</td>
+<td>_...</td>
+</tr>
+<tr>
+<td>C</td>
+<td>-.-.</td>
+</tr>
+<tr>
+<td>CH</td>
+<td>----</td>
+</tr>
+<tr>
+<td>D</td>
+<td>-..</td>
+</tr>
+<tr>
+<td>E</td>
+<td>.</td>
+</tr>
+<tr>
+<td>F</td>
+<td>..-.</td>
+</tr>
+<tr>
+<td>G</td>
+<td>--.</td>
+</tr>
+<tr>
+<td>H</td>
+<td>....</td>
+</tr>
+<tr>
+<td>I</td>
+<td>..</td>
+</tr>
+<tr>
+<td>J</td>
+<td>.---</td>
+</tr>
+<tr>
+<td>K</td>
+<td>-.-</td>
+</tr>
+<tr>
+<td>L</td>
+<td>.-..</td>
+</tr>
+<tr>
+<td>M</td>
+<td>--</td>
+</tr>
+<tr>
+<td>N</td>
+<td>-.</td>
+</tr>
+<tr>
+<td>O</td>
+<td>---</td>
+</tr>
+<tr>
+<td>P</td>
+<td>.--.</td>
+</tr>
+<tr>
+<td>Q</td>
+<td>--.-</td>
+</tr>
+<tr>
+<td>R</td>
+<td>.-.</td>
+</tr>
+</table>
+</td>
+<td align="left">
+<table cellspacing="2" cellpadding="2" border="1" align="DEFAULT">
+<tr>
+<td>S</td>
+<td>...</td>
+</tr>
+<tr>
+<td>T</td>
+<td>-</td>
+</tr>
+<tr>
+<td>U</td>
+<td>..-</td>
+</tr>
+<tr>
+<td>V</td>
+<td>...-</td>
+</tr>
+<tr>
+<td>W</td>
+<td>.--</td>
+</tr>
+<tr>
+<td>X</td>
+<td>-..-</td>
+</tr>
+<tr>
+<td align="left">Y</td>
+<td align="left">-.-- </td>
+</tr>
+<tr>
+<td align="left">Z </td>
+<td align="left">--.. </td>
+</tr>
+<tr>
+<td align="left">&acirc; </td>
+<td align="left">.-.- </td>
+</tr>
+<tr>
+<td>&agrave;</td>
+<td>.--.- </td>
+</tr>
+<tr>
+<td>&egrave;</td>
+<td>..-..</td>
+</tr>
+<tr>
+<td>&ntilde;</td>
+<td>--.-- </td>
+</tr>
+<tr>
+<td>&ouml; </td>
+<td>---. </td>
+</tr>
+<tr>
+<td>&uuml; </td>
+<td>..-- </td>
+</tr>
+<tr>
+<td>&ccedil; </td>
+<td>-.-.. </td>
+</tr>
+<tr>
+<td>1 </td>
+<td>.---- </td>
+</tr>
+<tr>
+<td>2</td>
+<td>..---</td>
+</tr>
+<tr>
+<td>3</td>
+<td>...--</td>
+</tr>
+<tr>
+<td>4</td>
+<td>...-</td>
+</tr>
+</table>
+</td>
+<td>
+<table cellspacing="2" cellpadding="2" border="1" align="DEFAULT">
+<tr>
+<td> 5 </td>
+<td>..... </td>
+</tr>
+<tr>
+<td>6</td>
+<td>-....</td>
+</tr>
+<tr>
+<td>7</td>
+<td>--...</td>
+</tr>
+<tr>
+<td>8</td>
+<td>---..</td>
+</tr>
+<tr>
+<td>9</td>
+<td>----.</td>
+</tr>
+<tr>
+<td>0</td>
+<td>-----</td>
+</tr>
+<tr>
+<td>. </td>
+<td>.-.-.- </td>
+</tr>
+<tr>
+<td>, </td>
+<td>--..-- </td>
+</tr>
+<tr>
+<td>: </td>
+<td>---... </td>
+</tr>
+<tr>
+<td>; </td>
+<td>-.-.-. </td>
+</tr>
+<tr>
+<td>? </td>
+<td>..--.. </td>
+</tr>
+<tr>
+<td>' </td>
+<td>.----. </td>
+</tr>
+<tr>
+<td>- </td>
+<td>-....- </td>
+</tr>
+<tr>
+<td>+ </td>
+<td>.-.-. </td>
+</tr>
+<tr>
+<td>/ </td>
+<td>-..-. </td>
+</tr>
+<tr>
+<td>( </td>
+<td>-.--. </td>
+</tr>
+<tr>
+<td>) </td>
+<td>-.--.- </td>
+</tr>
+<tr>
+<td>= </td>
+<td>-...- </td>
+</tr>
+<tr>
+<td>&quot; </td>
+<td>-.-.. </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<p>Ecco un alfabeto Morse completo, ratificato dalla Convenzione Internazionale delle Telecomunicazioni. Oltre a questo esistono alcune abbreviazioni, unione di due lettere senza spaziatura, con particolari significati (inizio e fine trasmissione, attendere...). </p>
+<hr />
+<h3><a name="riquadro2">La notte dei tasti telegrafici su Oscar</a></h3>
+<p>La telegrafia &egrave; anche questo. Nella notte del 1 gennaio 1973, all'indomani del lancio del pionieristico satellite amatoriale Oscar 6, alcuni membri dell'AMSAT decisero di provare a riunire il meglio delle vecchie e delle nuove tecnologie usate dai radioamatori, ideando cos&igrave; la &quot;notte dei tasti telegrafici&quot; (Straight Key Night). Da allora, gli orgogliosi operatori hanno mantenuto la tradizione di ritrovarsi tutti gli anni, nella notte del primo gennaio, per operare in CW sui satelliti della ormai lunga serie degli Oscar; anche solo per pochi minuti, tutti i grafisti del mondo sono invitati a farsi gli auguri usando rigorosamente tasti di tipo tradizionale. </p>
+<p>Questo tipo particolare di &quot;Contest&quot; (i Contest sono le gare organizzate dai radioamatori che premiano la stazione che riesce a collegare, ad esempio, pi&ugrave; paesi nell'arco di uno o due giorni) &egrave; totalmente informale, senza punteggi e senza limitazioni; al suo termine, tuttavia, vengono votati uno o pi&ugrave; radioamatori che, a parere generale, hanno saputo meglio interpretare lo spirito di questo particolare incontro. </p>
+<p>Per partecipare dunque &egrave; sufficiente lanciare un CQ SKN (che, per chi non lo sapesse, significa &quot;chiamata generale&quot; per la Straight Key Night) su una frequenza del segmento CW di un qualsiasi satellite Oscar, tra le ore 0:00 e le 23:59 UTC del 1 gennaio, oppure rispondere ad una chiamata. </p>
+<p>L'edizione del 1994 &egrave; stata la ventiduesima, ed ha visto per la prima volta l'impiego di un satellite Oscar molto particolare, il pi&ugrave; vecchio, grande ed affidabile: l'Oscar Zero alias la nostra Luna. Sebbene non sia stata costruita dall'AMSAT, &egrave; stata adottata! </p>
+<p>Una tecnica operativa molto difficile e raffinata, infatti, &egrave; la cosiddetta &quot;EME&quot; (Earth-Moon-Earth), che prevede il rimbalzo sulla luna di onde radio tramite l'impiego di antenne molto direttive. </p>
+<p>&nbsp;</p>
+<p>[Info Spacenews, via Ray W2RS] </p>
+<hr />
+<p>Fig. 1 (perduta, mi dispiace...) - Il programma CW Tutor, che insegna la ricezione e la trasmissione della telegrafia, e prepara all'esame di radioamatore. </p>
+  </div>
+    </div>
+  </body>
+</html>

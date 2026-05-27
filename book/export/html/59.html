@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it" xml:lang="it">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="/dosearch.js"></script>
+    <title>Il SITOR, ovvero l&#039;evoluzione della specie (seconda parte - solo materiale grezzo)</title>
+    <base href="http://www.sganawa.org" />
+    <link type="text/css" rel="stylesheet" href="misc/print.css" />
+      </head>
+  <body>
+              <div class="section-1">
+          
+    <div id="node-59" class="section-2">
+  <h1 class="book-heading">Il SITOR, ovvero l&#039;evoluzione della specie (seconda parte - solo materiale grezzo)</h1>
+  <h3>Il SITOR, ovvero l&rsquo;evoluzione della specie (seconda parte)</h3>
+<h5>L'articolo &egrave; andato perduto. &Egrave; disponibile solo questo materiale grezzo in inglese. Non si tratta, ovviamente, di materiale da me scritto, ma di informazioni &quot;recuperate&quot; da varie fonti amatoriali. </h5>
+<hr />
+<p>'&quot; The method of error detection used is quite simple. Five of the bits in each character of the AMTOR code are information bearing bits. The other two are used for error detection. The five information bearing bits in each character are identical to the five information bearing bits for that character in the Baudot code. Each of the two error detection bits can be either a mark or a space. The code is arranged so that every AMTOR character contains four marks and three spaces. A three character data-burst then, contains a total of twelve marks and nine spaces. All the information receiving station must dotherefore, is count the total number of marks and spaces in the data-burst it received to detect whether or not there has been an error. </p>
+<p>Please note that throughout this description of the AMTOR ARQ mode I have referred to the &quot;information sending station&quot; and the &quot;information receiving station&quot;. This is because when two stations are linked in Mode A, both are transmitting at intervals, thus it would be incorrect to refer to one as the &quot;transmitting station&quot; and the other as the &quot;receiving station&quot;. </p>
+<p>In an ARQ link, the timing is set by the station that initiated the contact. It is called the &quot;master&quot; station, with the other station being the &quot;slave&quot;. The second mode we will discuss is FEC. </p>
+<p>This mode is not synchronous, and the stations involved are not linked, but they do operate in phase with each other. In order for them to stay in phase, each FEC transmission is started with several sets of &quot;phasing pairs&quot;. These are repeated at regular intervals during the course of the transmission, so that the two stations can stay in phase. While no data is being transferred, idle signals are transmitted to keep the two stations in phase. In Mode B, each character is transmitted twice, 350 milliseconds apart. The receiving station prints a character the first time it is received if the mark/space count is correct. If it was received correctly the first time it was sent it was printed, and will be ignored the second time it is received. If it was incorrect the first time it was received, it is ignored, and will be printed the second time it is sent if it is received correctly. </p>
+<p>This method of error detection is much less effective than that used in ARQ, and the error-rate is considerably higher than it is in that mode. Although higher than in ARQ, the error-rate is still far lower than it is in other forms of RTTY. </p>
+<p>The first is that lower sideband ONLY is used regardless of operating frequency. Failure to observe this practice will result in reversed tones, known as an &quot;upside-down&quot; signal. </p>
+<p>The second convention regards how the frequency of operation is specified. In single sideband or CW operation it is simple. If you are on say, 14,100.00 and you are told to &quot;move to 14,050.00&quot;, you just dial up the new frequency. </p>
+<p>AMTOR - Part three of a three part series. </p>
+<p>There are three ways to initiate an ARQ contact in AMTOR. You can call CQ, you can respond to another stations CQ call, or you can call a specific station. </p>
+<p>In the first case, always call CQ in the FEC mode, NOT ARQ. When you do this, be sure to include your selcal. Following your CQ, return to AMTOR Standby and wait for a reply. If you receive a response to your CQ, it could be in FEC, although it is much more likely that it will be in ARQ. If the response is in ARQ, your station will begin the ARQ cycle, and you will see that idle signals are being received. At this point, the link is established and your station is ready to receive text. Now the other operator need only open his transmit buffer, type the text, and it will be sent to you. </p>
+<p>If text stops appearing on your screen, just stand by. Your station is probably requesting repeats because it received a data-burst incorrectly. You will soon receive the block correctly, and traffic will begin to flow again. </p>
+<p>When the other station is ready to receive information from you, he will turn the link over to you, and it will be your turn to send text to him. He will do this by sending you a turnover sequence. That is the two characters &quot;Plus-Question mark&quot; (+?). </p>
+<p>You will know when the turnover has been made by the change in rhythm of your stations transmissions. Before the turnover, your station was sending single character data-bursts 70 milliseconds in length. When the turnover occurs, it will begin transmitting three character data- bursts 210 milliseconds in length. </p>
+<p>When the turnover has been made, simply open your transmit buffer and begin typing text for transmission. </p>
+<p>When you are transmitting text in ARQ, you will see it pop onto your screen in three character blocks, as the blocks are acknowleged by the receiving station. If this text stops appearing and nothing seems to be happening, it just means that the receiving station is requesting repeats because it received the last data-burst your station sent incorrectly. Stand by. The incorrect block will soon be acknowledged, and traffic will flow again. </p>
+<p>When you are ready to receive text again, reverse the link by sending the turnover sequence (+?). </p>
+<p>The second way to initiate a contact is to answer another stations CQ. When a station calls CQ in FEC, its selcal should be included. If it is not, you can deduce what it is. To answer the CQ, just start an ARQ transmission. When you do this, your program will ask for the selcal of the station you wish to call. When you enter it, the ARQ cycle will start, with your station transmitting the other stations selcal. You will soon hear the other station responding with control codes, and you will see an indication that your station is sending idle signals. Now the link is established. Just open your transmit buffer and type in text for transmission. When you are ready for the other stations reply, send the turnover (+?) and reverse the link. </p>
+<p>The third way to initiate a contact is to call a specific station in ARQ. Usually, this will happen when you have been watching an ARQ contact in the Listen mode, and you want to call one of the stations when they finish. In this case, since you have been &quot;eavesdropping&quot;, you already know the selcal of the station you want to call. You also know it is on frequency, since the contact has just been terminated. Call your station by starting an ARQ transmission just as though you were replying to a CQ call. </p>
+<p>There are two control codes used in AMTOR that you should be familiar with. </p>
+<p>The first is &quot;Control-C&quot;. It is used to force a changeover. If the other station in an ARQ link is information sending station, and you want to reverse the link without waiting for it to send the changeover sequence, you can do so by sending it a Control- C. </p>
+<p>The second code is &quot;Control-D&quot;. It is used to break an ARQ link. An ARQ contact should ALWAYS be ended with a Control D. </p>
+<p>There are a couple of other things to be aware of. </p>
+<p>The T/R switching time of your rig should be on the order of 25 milliseconds for best ARQ operation. All newer rigs and most older ones easily meet this standard. Some rigs though, designed before AMTOR came into use, may require simple modifications. Notably, these are the Kenwood TS930S, and the earlier ICOM rigs. In any case, if you are in doubt, a call to the manufacturer will get you any information you need.Since the ARQ cycle requires your rig to return to full receive sensitivity quickly, always set your AGC for fast release, or turn it off entirely. </p>
+<p>Most AMTOR activity will be found on 20 meters. Look for it around 14,075.00. You will also find activity around 3,650.00, 7,050.00, and 21,075.00. </p>
+<p>I hope I've made AMTOR easier for you to understand than the manual you got with your data controller did. </p>
+<p>If you enjoy a good rag chew, it's lots of fun. Give it a try. </p>
+<hr />
+<p>Ciao a tutti </p>
+<p>Su suggerimento di IK1DQG Pino, che per primo aveva segnalato questo Qrg,ho effettuato frequenti ascolti e posso fornirvi 2-3 orari ormai appurati come &quot;schedule&quot; .Le telefoto vengono diffuse alle ore UTC 19,24 e 19.40 circa.Sono trasmesse 2-3 immagini di parte del globo raffigurante la zonaMar Nero/Mar Caspio, e anche la zona Europea con una grossa porzionedi Africa. </p>
+<p>Altri orari non saprei dirvi ma ho visto che anche verso le ore 04.30 sempreUTC sono trasmesse alfre foto. </p>
+<p>73 de Mau IK1NAF </p>
+<hr />
+<p>La stazione segnalata da Pino IK1DQG, con emissione di foto Meteosat in HF,&egrave; AOK, U.S. Navy Rota (Spagna). Le frequenze sono:</p>
+<p>  4623,0 kHz </p>
+<p>  5864,5 kHz </p>
+<p>  9373,0 kHz </p>
+<p>  11485,0 kHz </p>
+<p>Negli orari riportati nella &quot;Guide to Utility Stations - 1994&quot; di JoergKlingenfuss non risultano ritrasmissioni di immagini Meteosat: probabilmente &egrave; un nuovo servizio, introdotto di recente. Mi dispiace di non poterfornire orari precisi: non resta che sorvegliare le frequenze. </p>
+<p>73 e buoni DX da Fabrizio IK4MTG. </p>
+<hr />
+<p>La stazione segnalata da Claudio IW2EZS &egrave; NAM, U.S. Navy Norfolk, Virginia(USA), che opera su 3357 / 8080 / 10865 / 15959 / 20015 kHz.Gli orari di trasmissione delle immagini del nord Atlantico riprese dal satellite GOES sono (orari UTC): 0215, 0515, 0545, 0745, 1115, 1400, 1715, 1745, 1945, 2315. </p>
+<p>73 e buona visione da Fabrizio ik4mtg.<br /><a href="http://www.sganawa.org/mario/articoli/index.htm">Torna all'indice degli articoli</a> </p>
+<hr />
+<h5 align="left">Copyright 1994, 1998 <a href="http://www.sganawa.org/mario/faq.htm">Mario Chisari</a>. Tutti i diritti riservati.<br /> La riproduzione, anche parziale, &egrave; permessa se &egrave; citata la fonte.</h5>
+<h5 align="left">Aggiornato il 
+<!--webbot bot="TimeStamp" s-type="EDITED" s-format="%d/%m/%y" startspan --><!--webbot bot="TimeStamp" s-type="EDITED" s-format="%d/%m/%y" startspan --><p>19/07/98</p>
+<!--webbot bot="TimeStamp" endspan i-checksum="13836" --><!--webbot bot="TimeStamp" endspan i-checksum="13836" --><p>.</p></h5>
+<p> &gt; </p>
+  </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it" xml:lang="it">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="/dosearch.js"></script>
+    <title>I programmi per la ricezione del Meteofax (quinta parte)</title>
+    <base href="http://www.sganawa.org" />
+    <link type="text/css" rel="stylesheet" href="misc/print.css" />
+      </head>
+  <body>
+              <div class="section-1">
+          
+    <div id="node-52" class="section-2">
+  <h1 class="book-heading">I programmi per la ricezione del Meteofax (quinta parte)</h1>
+  <h5>Inedito! - Marzo 1994</h5>
+<h3>I programmi per la ricezione del Meteofax (quinta parte)</h3>
+<p><em>Seconda parte della galleria di programmi per la ricezione del Fax; ce n'&egrave; per tutti i gusti...</em></p>
+<h5>di Mario Chisari</h5>
+<p>Se ancora non avete trovato un programma che fa per voi (ma siete proprio di gusti difficili...), qui avete una seconda possibilit&agrave; . Chi non &egrave; un &quot;addetto ai lavori&quot; in genere non sospetta neppure che esistano tante possibilit&agrave; di scelta; confrontando i vari pacchetti sicuramente potete trovare quello che fa pi&ugrave; al caso vostro, dal &quot;freeware&quot; a costo zero ai sistemi semiprofessionali che richiedono un hardware aggiuntivo (in genere una scheda dedicata). </p>
+<p>A beneficio di quanti non hanno letto la scorsa puntata ricordo che tutti questi programmi fanno uso dell'interfaccia HAMCOMM, presentata nel numero di settembre '93. Tutti girano sotto PC, anche se programmi analoghi sono presenti su altre piattaforme (per tutti, l'R-Wefax per Amiga). </p>
+<p>HFFAX </p>
+<p>&Egrave; stato probabilmente uno dei primi software &quot;low cost&quot; per il Fax su PC, stabilendo cos&igrave; uno standard (la prima versione &egrave; del 1987). Sebbene ormai il &quot;look&quot; ne denuncia l'et&agrave; , esso si difende ancora benissimo: il formato di file utilizzato (FAX, 640x480, 16 colori) &egrave; riconosciuto ed usato anche da molti altri programmi inclusi quelli per il trattamento delle immagini. &Egrave; adatto anche alla ricezione delle ormai obsolete &quot;telefoto&quot;, che possono essere ricostruite a partire dai tre colori fondamentali. </p>
+<p>Un altro notevole punto di forza del programma &egrave; il completissimo database delle stazioni HF incorporato: esso include migliaia di orari con descrizioni del tipo di immagini per la miriade di emittenti WEFAX sparse nel mondo, frequenze incluse. &Egrave; possibile cio&egrave; sapere su quali frequenze avverr&agrave; la prossima trasmissione dell'immagine voluta (tipo: la carta dei venti), e schedularne la ricezione all'orario previsto con la giusta configurazione di parametri (<a href="#figura">Fig. 1</a>). Diversi eventi possono essere selezionati, salvando per ognuno l'immagini ottenuta. Ci manca solo che anche la radio sia sintonizzata dal computer... be', ma un vero radioamatore non vorrebbe essere privato del gusto di girare la manopola! </p>
+<p>Resta comunque che con la possibilit&agrave; di sfruttare la grafica SVGA (con virtualmente qualsiasi risoluzione) e la gestione dei colori, questo pacchetto rimane tuttora fra i pi&ugrave; interessanti in circolazione. </p>
+<p>PCGOES </p>
+<p>Scritto dallo stesso autore di HFFAX, dimostra di avere con il precedente molti punti in comune. Stessa interfaccia (un men&ugrave; che ricorda i primi programmi di contabilit&agrave; generale!) e stesse opzioni. Stavolta per&ograve; l'obbiettivo &egrave; la ricezione dei satelliti (GOES &egrave; il nome di quelli geostazionari USA). Al posto del database delle stazioni della versione HF c'&egrave; dunque qui un'opzione dedicata al tracciamento orbitale, che pu&ograve; mostrarvi la posizione dei satelliti che vi interessano (<a href="#figura" target="_self">Fig. 2</a>). Intendiamoci, esistono anche programmi a se stanti (ad esempio il TRAKSAT) che fanno di meglio; ma &egrave; molto comodo avere tutto nello stesso ambiente, specialmente se avete problemi di spazio sul portatilino LCD che utilizzate in barca... Per il resto c'&egrave; poco da dire, se non che la ormai consueta schermata di taratura indica i millivolt, e non la frequenza (ricordiamo che in questo caso la modulazione &egrave; AM, non FM). Tale indicazione &egrave; per&ograve; illusoria, in quanto il programma fa uso esternamente di un piccolo convertitore tensione/frequenza, poco pi&ugrave; complesso dell'interfaccia HAMCOMM che, ricordiamo, &egrave; valida solo per la modulazione FM in HF. Un tale convertitore &egrave; come al solito disponibile in &quot;kit&quot; per l'autocostruzione; un possibile schema lo trovate nella documentazione del JVFAX, di cui abbiamo parlato la scorsa volta. </p>
+<p>Per quanto riguarda il PCGOES, ritengo che oggi, tranne che per esigenze specifiche quale quella a cui ho accennato, sia possibile trovare di meglio. </p>
+<p>APTCAP </p>
+<p>Veniamo ora al programma pi&ugrave; &quot;far da s&eacute;&quot; che esista nel mondo del Fax. Si tratta infatti di un pacchetto &quot;public domain&quot;, che include gli eseguibili, ma anche (udite udite) i relativi sorgenti per il Turbo C++ (con parti in assembler). Se desiderate un sistema pronto e funzionante, potete anche cercare altro; ma se l'argomento vi appassiona tanto che volete scrivere il <em>v</em><em>o</em><em>s</em><em>t</em><em>r</em><em>o</em> software per la <em>v</em><em>o</em><em>s</em><em>t</em><em>r</em><em>a</em> interfaccia, non potete trovare miglior punto di partenza. Questo pacchetto offre i sorgenti commentati ed i &quot;makefile&quot; per generare non solo un buon programma per la ricezione, ma anche il trattamento delle immagini: avendo sott'occhio un istogramma dei colori, si pu&ograve; trattare l'immagine con le curve standard (suggerite dal gestore del meteosat), oppure create dall'utente. E' inoltre possibile la gestione di diversi formati grafici in uscita, anche se quello interno &egrave; un bitmap brutale. </p>
+<p>Unico neo, la documentazione: praticamente nulla, a parte i listati. Francamente, per quanto ben commentati non &egrave; che siano proprio leggibili quanto un manuale; l'autore del programma dice che un giorno scriver&agrave; anche quello, ma sapete com'&egrave; , la passione non &egrave; tutto, ci vorrebbe anche il tempo... </p>
+<p>SOFTWARE DEDICATI </p>
+<p>Accanto a questi programmi diciamo cos&igrave; &quot;general pourpose&quot; ne esistono altri sviluppati dai tanti autori di tante schede, communication controller e cos&igrave; via. E' ovviamente senza senso esaminarli senza il relativo hardware; sappiate tuttavia che ne esistono molti, alcuni di livello decisamente professionale. E chiss&agrave; se forse in un futuro non parleremo anche di quelli... </p>
+<p>E con questo ritengo di aver concluso l'argomento fax e la sua tecnica di ricezione; prossimamente ritorneremo a parlare di satelliti, ma intanto gustatevi qualche piccolo anticipo nel <a href="#riquadro1" target="_self">riquadro</a>. </p>
+<p>Cos&igrave; concludo, augurandovi (come si usa tra OM) buoni DX...</p>
+<p>(5. fine) </p>
+<hr />
+<h3><a name="riquadro1">Riquadro 1</a></h3>
+<p>CRITTOGRAFAZIONE DELLE IMMAGINI AD ALTA RISOLUZIONE </p>
+<p>La notizia aveva gi&agrave; cominciato a girare da qualche mese, destando qualche preoccupazione negli utenti regolari dei satelliti meteo. &Egrave; ora uscita una notizia ufficiale che ci tranquillizza. </p>
+<p>EUMETSAT (il gestore dei satelliti Meteosat) sta sviluppando un sistema di crittografazione dei dati HRI (ovvero delle immagini digitali ad alta risoluzioni scambiate tra il satellite ed il centro di controllo a terra). </p>
+<p>I Meteosat, cugini degli statunitensi GOES e dei giapponesi GMS, sono satelliti geostazionari operanti in banda &quot;S&quot;, ovvero intorno ai 1691 MHz. </p>
+<p>Il primo modulo di crittografazione &egrave; gi&agrave; stato implementato da qualche mese, mentre il secondo dovrebbe entrare in funzione entro Aprile nella stazione di controllo in Germania; con esso &egrave; quindi ora disponibile un canale di trasmissione crittato. L'utilizzo regolare di questo sistema &egrave; stato pianificato per l'inizio del 1995. </p>
+<p>I classici sistemi di ricezione amatoriale, che non fanno uso dell'HSI, potranno quindi continuare a funzionare senza problemi. </p>
+<p>A questo proposito &egrave; anzi da segnalare che &egrave; confermato a tutt'oggi il regolare funzionamento del nuovo Meteosat 6, lanciato alle 1:17 UTC del 20 novembre 1993. </p>
+<p>La prima immagine nel visibile era stata ricevuta il 29 novembre alle 13:00 UTC, mentre i test sono stati completati a met&agrave; febbraio. </p>
+<p>La situazione attuale dei satelliti Meteosat &egrave; : </p>
+<p>METEOSAT-4 operativo, alla posizione nominale; </p>
+<p>METEOSAT-3 si trova a circa 75&deg; Ovest. </p>
+<p>Utilizza un canale a 1691 MHz, inviando immagini Wefax e dati digitali. </p>
+<p>METEOSAT-5 rimarr&agrave; in stand-by, a 6/7 gradi Ovest; </p>
+<p>METEOSAT-6 rimarr&agrave; a 10 gradi Ovest. </p>
+<p>(frm ESA - BBS)</p>
+<hr />
+<p><a name="figura">(Le immagini non sono pi&ugrave; disponibili... mi dispiace!)</a></p>
+<p>Fig. 1a e 1b: Il programma HFFAX, durante una ricerca su database di una trasmissione. Le informazioni sono trasferite in modo automatico allo &quot;scheduler&quot; di ricezione. </p>
+<p>Fig. 2: Un'immagine di PCGOES mentre traccia la posizione di un satellite (Cinese, per inciso). Notare il calcolo dell'effetto Doppler sul segnale ricevuto... </p>
+<p>Fig. 3: APTCAP, durante il trattamento di un'immagine per migliorarne la leggibilit&agrave; . Notare l'istogramma dei colori prima del trattamento, la curva di trasformazione (completamente modificabile tramite mouse) ed il risultato sulla distribuzione dei colori. Gli effetti sono visibili dalla figura 3b (ottenuta con curva lineare) alla 3c (dopo il trattamento).</p>
+  </div>
+    </div>
+  </body>
+</html>

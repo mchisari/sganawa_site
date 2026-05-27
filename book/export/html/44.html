@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it" xml:lang="it">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="/dosearch.js"></script>
+    <title>La ricezione delle agenzie di stampa (2a parte)</title>
+    <base href="http://www.sganawa.org" />
+    <link type="text/css" rel="stylesheet" href="misc/print.css" />
+      </head>
+  <body>
+              <div class="section-1">
+          
+    <div id="node-44" class="section-2">
+  <h1 class="book-heading">La ricezione delle agenzie di stampa (2a parte)</h1>
+  <h5>Da &quot;Micro &amp; Personal Computer&quot; - Rubrica &quot;PC &amp; Radio&quot;- Settembre 1993 </h5>
+<h3>La ricezione delle agenzie di stampa (seconda parte)</h3>
+<p><em>Costruiamoci un sistema per la ricezione della radiotelegrafia e agenzie di stampa.</em></p>
+<h5>di Mario Chisari</h5>
+<p>La puntata di questo mese sar&agrave; (per la gioia dei radioamatori &quot;DOC&quot; e nel segno del vero &quot;Ham Spirit&quot;) tutta fatta... col saldatore in mano. Chiariremo meglio infatti alcuni aspetti pratici di quanto detto la volta scorsa, ad uso di quanti vogliano rimboccarsi le maniche per entrare fattivamente nel mondo delle radiocomunicazioni. In tempi di tecnologie esasperate e supercomputer tascabili dalle prestazioni sempre pi&ugrave; disumane, pu&ograve; essere rilassante veder funzionare qualcosa fatto con le nostre mani con un investimento di poche migliaia di lire ed un po' di tempo libero. Se non vi siete mai cimentati in costruzioni elettroniche, ma ne avete sempre avuto la curiosit&agrave;, ecco l'occasione per cominciare. </p>
+<p>TUTTO FATTO COL SOFTWARE </p>
+<p>Avevamo gi&agrave; visto l'interessante programma &quot;HAMCOMM&quot; (<a href="#figura" target="_self">fig.1</a>), che permette la demodulazione sia della RTTY (RadioTeleTYpe, o &quot;radiotelescrivente&quot;), sia del CW (Continuous Wave, cio&egrave; la telegrafia alias codice Morse), con un'accorta combinazione dell'hardware del PC e di un pseudo-filtraggio digitale via software. </p>
+<p>In <a href="#figura" target="_self">figura 2</a> potete vedere lo schema dell'interfaccia proposta dall'autore del programma stesso. Se intendete solamente ricevere potete non montare i componenti relativi alla parte trasmettitore, riducendo ulteriormente il gi&agrave; esiguo numero di componenti, disponibili anche al supermercato... </p>
+<p>Scherzi a parte, una volta comprati i componenti ed una basetta preforata per montaggi sperimentali (di dimensioni 5x5 Cm. circa) dal pi&ugrave; vicino negozio di elettronica, si possono inserire i componenti nei fori della basetta seguendo pi&ugrave; o meno la disposizione dello schema elettrico. Si pu&ograve; quindi capovolgere la basetta e cominciare a collegare i componenti tra loro usando saldatore e stagno, sempre con lo schema sott'occhio (in figura 3 un esempio di realizzazione). &Egrave; abbastanza inutile porsi problemi sulla lunghezza dei collegamenti, viste le frequenze in gioco (banda audio); tuttavia &egrave; meglio che il filo sia ben teso tra i vari collegamenti. In questo caso un buon risultato estetico lo &egrave; altrettanto funzionalmente. </p>
+<p>Attenzione comunque a non fare corti circuiti tra i piedini dell'integrato uA741, anzi gi&agrave; che ci siete usate uno zoccolo per poterlo sostituire facilmente (&egrave; l'unico pezzo che ha qualche speranza di guastarsi); lavate poi il circuito con un po' di trielina per eliminare i residui della saldatura. </p>
+<p><!--.--><!--.--><!--E--><!--E--><!--D --><!--D --><!--O--><!--O--><!--R--><!--R--><!--A --><!--A --><!--A --><!--A --><!--R--><!--R--><!--I--><!--I--><!--C--><!--C--><!--E--><!--E--><!--V--><!--V--><!--E--><!--E--><!--R--><!--R--><!--E--><!--E--><!--!--><!--!--></p><p>Una volta terminato il montaggio ci faremo il tradizionale &quot;giretto&quot; per distrarci un po' tornando ricontrolleremo attentamente che non ci siano stati errori di montaggio. </p>
+<p>Per il collegamento con la radio HF &egrave; consigliabile un pezzo di filo abbastanza lungo (1.5/2 m) per poter allontanare la radio dal PC nel caso i disturbi emessi da quest'ultimo siano troppo forti. Sintonizziamo in LSB una stazione che trasmette in RTTY o morse e, dopo averla ben centrata colleghiamo l'interfaccia al jack dell'altoparlante della radio. Contemporaneamente (o prima o dopo, non prendetemi alla lettera!) accendiamo il PC e lanciamo il programma; se tutto funziona, aprendo la finestra &quot;Spectrum&quot; (sotto &quot;Mode&quot;) vedremo formarsi un istogramma in movimento secondo ci&ograve; che la radio sta ricevendo. Apprezzato l'effetto scenografico (che gi&agrave; da solo vale l'interfaccia!), notiamo che ci&ograve; che stiamo vedendo non &egrave; altro che una rappresentazione in termini di frequenza del segnale che sentiamo, simile a quella che appare sugli impianti stereo pi&ugrave; pieni di &quot;lucine&quot;. </p>
+<p>Se stiamo &quot;vedendo&quot; una stazione RTTY, sul rumore di fondo si dovrebbero distinguere nettamente due &quot;picchi&quot;, che sono quelli relativi alle frequenze di Mark e Space trasmesse dalla stazione. Regoliamo quindi il volume in modo che questi picchi siano il pi&ugrave; possibile netti. La differenza in Hertz tra le loro frequenze &egrave; detta lo &quot;Shift&quot;, che convenzionalmente &egrave; pari a 170, 425 o 850 Hertz. Una volta individuato il giusto valore dalla finestra &quot;Spectrum&quot; lo si imposta nel men&ugrave; Keying. A questo punto, manovrando sulla sintonia fine della radio si fa si che la frequenza di discriminazione si ponga esattamente tra quelle di Mark e Space, in modo da distinguerle nettamente; per fare questo pu&ograve; essere utile osservare la schermata &quot;Tune&quot;. </p>
+<p>Alternativamente si pu&ograve; spostare la frequenza di discriminazione senza spostare le sintonia. </p>
+<p>Resta ancora da individuare la velocit&agrave;, che generalmente &egrave; pari a 50 baud, ma non sempre. Se non conoscete il valore per una particolare stazione, partite da questa e, se leggete solo lettere a casaccio, provate con le altre. </p>
+<p>Alcune stazioni, poi, trasmettono coi toni di Mark e Space invertiti; per riceverle basta porre il ricevitore in USB, o, pi&ugrave; semplicemente, selezionare l'opzione &quot;reverse&quot; del men&ugrave; Keying. </p>
+<p>Selezionando infine l'opzione &quot;Scope&quot; si pu&ograve; vedere la forma d'onda del segnale dopo il &quot;filtraggio&quot; digitale; &egrave; importante che non ci siano disturbi, e che le transizioni di livello siano ben cadenzate (a multipli di 20 ms per i 50 baud). </p>
+<p>La stessa tecnica vale per la ricezione della telegrafia; in questo caso si avr&agrave; un unico picco di frequenza e si far&agrave; in modo che corrisponda al valore di discriminazione. Per quanto riguarda la velocit&agrave; di manipolazione, una volta impostato un buon valore iniziale il programma &egrave; in grado di agganciarsi e seguire anche le variazioni causate da un operatore umano. </p>
+<p>Data la semplicit&agrave; dell'interfaccetta non pretendete prestazioni impossibili; soprattutto le prime volte scegliete segnali abbastanza forti e puliti, onde evitare di complicarvi terribilmente la vita. </p>
+<p>E NEL FUTURO? </p>
+<p>HamComm non &egrave; che un esempio dei tanti programmi messi a punto e distribuiti liberamente da volenterosi e, ammettiamolo, geniali radioamatori-amanti del computer. Sulla stessa falsariga di questo esistono diversi altri programmi molto validi ed apprezzati, che magari funzionano in diversi modi di comunicazione (anche FAX e Packet) con la stessa interfaccia elementare. </p>
+<p>La nuova generazione &egrave; probabilmente gi&agrave; nata: cominciano a circolare programmi che utilizzano un convertitore analogico/digitale (pi&ugrave; raffinato di un comparatore, ma ancora estremamente economico), quale quello contenuto nella scheda Sound Blaster o affini, e tecniche di filtraggio digitale per sostituire via software dei filtri audio che una volta richiedevano enormi quantit&agrave; di componenti elettronici di alto pregio. </p>
+<p>Tutto questo vi stuzzica? Presto avrete informazioni utili su dove trovare, e come utilizzare, questo software. </p>
+<hr />
+<p><a name="figura">(Le immagini non sono pi&ugrave; disponibili - mi dispiace...)</a></p>
+<p>Fig.1 - La schermata di apertura del programma HAMCOMM. Grazie, DL5YEC! </p>
+<p>Fig.2 - La schermata di taratura (Mode Spectrum). </p>
+<p>Fig.3 - Un possibile montaggio dell'interfaccia demodulatore. </p>
+<p></p>
+  </div>
+    </div>
+  </body>
+</html>
